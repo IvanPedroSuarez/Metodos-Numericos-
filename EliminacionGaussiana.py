@@ -14,6 +14,12 @@ def mostrarmatriz():
 
 
 
+
+
+
+
+
+
 llenarmatriz()
 mostrarmatriz()
 
