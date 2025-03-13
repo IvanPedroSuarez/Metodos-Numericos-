@@ -106,7 +106,7 @@ def gauss_pivot(matriz):
 matriz_ejemplo = [
     [4, 2, 3],  # Primera fila de la matriz
     [2, 5, 8],  # Segunda fila de la matriz
-    [1, 1, 2]  # Tercera fila de la matriz
+    [1, 1, 3]  # Tercera fila de la matriz
 ]
 
 print("Demostración de eliminación gaussiana con pivoteo parcial")
