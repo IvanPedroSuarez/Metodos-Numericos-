@@ -98,3 +98,5 @@ else:
 # Aplicar el método de eliminación gaussiana con pivoteo parcial
 matriz_triangular = gauss_pivot(matriz)
 print("Proceso de eliminación gaussiana completado.")
+
+
