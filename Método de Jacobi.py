@@ -31,9 +31,9 @@ def mostrarmatriz(matriz, nombre="Matriz"):
     print()
 
 
-def gauss_seidel(A, b, tol=1e-6, max_iter=100):
+def jacobi(A, b, tol=1e-6, max_iter=100):
     """
-    Método de Gauss-Seidel para resolver el sistema Ax = b.
+    Método de Jacobi para resolver el sistema Ax = b.
 
     Parámetros:
     - A: Matriz de coeficientes
@@ -45,14 +45,14 @@ def gauss_seidel(A, b, tol=1e-6, max_iter=100):
     - x: Vector solución
     """
     n = len(A)
-    x = np.zeros(n)  # Inicializamos la solución con ceros
+    x = np.zeros(n)  # Inicializamos la solución en ceros
     iteraciones = 0
 
     for _ in range(max_iter):
-        x_nuevo = np.copy(x)
+        x_nuevo = np.zeros(n)
 
         for i in range(n):
-            suma = sum(A[i][j] * x_nuevo[j] for j in range(n) if j != i)
+            suma = sum(A[i][j] * x[j] for j in range(n) if j != i)
             x_nuevo[i] = (b[i] - suma) / A[i][i]
 
         # Verificar la convergencia (criterio de parada)
@@ -74,5 +74,5 @@ A, b = llenarmatriz()
 print("\nMatriz ingresada:")
 mostrarmatriz(A, "Matriz de coeficientes")
 
-soluciones = gauss_seidel(A, b)
+soluciones = jacobi(A, b)
 print("Soluciones del sistema:", soluciones)
