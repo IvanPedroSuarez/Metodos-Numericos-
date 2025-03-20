@@ -2,7 +2,9 @@ import numpy as np
 
 
 def llenarmatriz():
-    """Función para llenar la matriz de coeficientes y el vector de términos independientes ingresados por el usuario."""
+    """
+    Función para que el usuario ingrese la matriz de coeficientes y el vector de términos independientes.
+    """
     n = int(input("Ingrese el número de ecuaciones (y variables): "))
     matriz = []
 
@@ -24,47 +26,56 @@ def llenarmatriz():
 
 
 def mostrarmatriz(matriz, nombre="Matriz"):
-    """Función para mostrar una matriz de forma legible."""
+    """
+    Función para mostrar una matriz con formato legible.
+    """
     print(f"\n{nombre}:")
     for fila in matriz:
         print(" ".join(f"{elemento:.2f}" for elemento in fila))
     print()
 
 
-def gauss_seidel(A, b, tol=1e-6, max_iter=100):
+def gauss_pivoteo(A, b):
     """
-    Método de Gauss-Seidel para resolver el sistema Ax = b.
+    Método de Eliminación Gaussiana con Pivoteo Parcial para resolver Ax = b.
 
     Parámetros:
     - A: Matriz de coeficientes
     - b: Vector de términos independientes
-    - tol: Tolerancia del error
-    - max_iter: Número máximo de iteraciones
 
     Retorna:
     - x: Vector solución
     """
     n = len(A)
-    x = np.zeros(n)  # Inicializamos la solución con ceros
-    iteraciones = 0
 
-    for _ in range(max_iter):
-        x_nuevo = np.copy(x)
+    # Matriz aumentada [A|b]
+    Ab = np.hstack((A, b.reshape(-1, 1)))
 
-        for i in range(n):
-            suma = sum(A[i][j] * x_nuevo[j] for j in range(n) if j != i)
-            x_nuevo[i] = (b[i] - suma) / A[i][i]
+    print("\nMatriz aumentada inicial:")
+    mostrarmatriz(Ab, "Matriz Aumentada")
 
-        # Verificar la convergencia (criterio de parada)
-        error = np.linalg.norm(x_nuevo - x, ord=np.inf)
-        if error < tol:
-            print(f"Convergencia alcanzada en {iteraciones + 1} iteraciones.\n")
-            return x_nuevo
+    # Eliminación hacia adelante con pivoteo parcial
+    for i in range(n):
+        # Pivoteo parcial: intercambiar filas si el pivote es pequeño
+        max_row = np.argmax(np.abs(Ab[i:, i])) + i
+        if max_row != i:
+            Ab[[i, max_row]] = Ab[[max_row, i]]  # Intercambio de filas
 
-        x = x_nuevo
-        iteraciones += 1
+        # Hacer 1 el pivote dividiendo la fila
+        Ab[i] = Ab[i] / Ab[i, i]
 
-    print("Máximo número de iteraciones alcanzado. El método puede no haber convergido.\n")
+        # Hacer ceros en la columna debajo del pivote
+        for j in range(i + 1, n):
+            Ab[j] -= Ab[j, i] * Ab[i]
+
+        print(f"\nMatriz después de la eliminación en la columna {i}:")
+        mostrarmatriz(Ab, "Matriz Aumentada")
+
+    # Sustitución regresiva para encontrar soluciones
+    x = np.zeros(n)
+    for i in range(n - 1, -1, -1):
+        x[i] = Ab[i, -1] - np.sum(Ab[i, i + 1:n] * x[i + 1:n])
+
     return x
 
 
@@ -74,5 +85,5 @@ A, b = llenarmatriz()
 print("\nMatriz ingresada:")
 mostrarmatriz(A, "Matriz de coeficientes")
 
-soluciones = gauss_seidel(A, b)
-print("Soluciones del sistema:", soluciones)
+soluciones = gauss_pivoteo(A, b)
+print("\nSoluciones del sistema:", soluciones)

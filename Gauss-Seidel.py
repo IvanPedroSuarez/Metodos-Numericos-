@@ -1,77 +1,78 @@
-def ingresar_sistema():
-    """
-    Permite al usuario ingresar el sistema de ecuaciones (matriz A y vector b).
+import numpy as np
 
-    Returns:
-        tuple: Matriz de coeficientes A y vector de términos independientes b.
-    """
-    n = int(input("Ingrese el número de ecuaciones (tamaño de la matriz): "))
-    A = []
-    b = []
 
-    print("Ingrese los coeficientes de la matriz A:")
+def llenarmatriz():
+    """Función para llenar la matriz de coeficientes y el vector de términos independientes ingresados por el usuario."""
+    n = int(input("Ingrese el número de ecuaciones (y variables): "))
+    matriz = []
+
+    print("Ingrese los coeficientes del sistema:")
     for i in range(n):
-        fila = list(map(float, input(f"Fila {i + 1} separada por espacios: ").split()))
-        if len(fila) != n:
-            print("Error: Debe ingresar exactamente", n, "coeficientes.")
-            return None, None
-        A.append(fila)
+        fila = []
+        for j in range(n):
+            valor = float(input(f'Ingrese el valor para la posición [{i}][{j}]: '))
+            fila.append(valor)
+        matriz.append(fila)
 
-    print("Ingrese los valores del vector b:")
+    vector_b = []
+    print("Ingrese los términos independientes:")
     for i in range(n):
-        b.append(float(input(f"b[{i + 1}]: ")))
+        valor = float(input(f'Ingrese el valor del término independiente en la fila {i}: '))
+        vector_b.append(valor)
 
-    return A, b
+    return np.array(matriz, dtype=float), np.array(vector_b, dtype=float)
 
 
-def mostrar_sistema(A, b):
-    """
-    Muestra el sistema de ecuaciones en forma de matriz aumentada.
-    """
-    n = len(A)
-    print("\nSistema de ecuaciones (matriz aumentada):")
-    for i in range(n):
-        fila = ' '.join(f"{A[i][j]:8.4f}" for j in range(n))
-        print(f"{fila} | {b[i]:8.4f}")
+def mostrarmatriz(matriz, nombre="Matriz"):
+    """Función para mostrar una matriz de forma legible."""
+    print(f"\n{nombre}:")
+    for fila in matriz:
+        print(" ".join(f"{elemento:.2f}" for elemento in fila))
     print()
 
 
-def gauss_eliminacion(A, b):
+def gauss_seidel(A, b, tol=1e-6, max_iter=100):
     """
-    Aplica el método de eliminación gaussiana para resolver el sistema Ax = b.
+    Método de Gauss-Seidel para resolver el sistema Ax = b.
+
+    Parámetros:
+    - A: Matriz de coeficientes
+    - b: Vector de términos independientes
+    - tol: Tolerancia del error
+    - max_iter: Número máximo de iteraciones
+
+    Retorna:
+    - x: Vector solución
     """
     n = len(A)
+    x = np.zeros(n)  # Inicializamos la solución con ceros
+    iteraciones = 0
 
-    for k in range(n):
-        # Verificar que el pivote no sea cero
-        if abs(A[k][k]) < 1e-10:
-            print("Error: Pivote cero encontrado. El sistema podría ser singular.")
-            return None
+    for _ in range(max_iter):
+        x_nuevo = np.copy(x)
 
-        # Eliminación hacia adelante
-        for i in range(k + 1, n):
-            factor = A[i][k] / A[k][k]
-            for j in range(k, n):
-                A[i][j] -= factor * A[k][j]
-            b[i] -= factor * b[k]
+        for i in range(n):
+            suma = sum(A[i][j] * x_nuevo[j] for j in range(n) if j != i)
+            x_nuevo[i] = (b[i] - suma) / A[i][i]
 
-        mostrar_sistema(A, b)
+        # Verificar la convergencia (criterio de parada)
+        error = np.linalg.norm(x_nuevo - x, ord=np.inf)
+        if error < tol:
+            print(f"Convergencia alcanzada en {iteraciones + 1} iteraciones.\n")
+            return x_nuevo
 
-    # Sustitución hacia atrás
-    x = [0] * n
-    for i in range(n - 1, -1, -1):
-        sumatoria = sum(A[i][j] * x[j] for j in range(i + 1, n))
-        x[i] = (b[i] - sumatoria) / A[i][i]
+        x = x_nuevo
+        iteraciones += 1
 
+    print("Máximo número de iteraciones alcanzado. El método puede no haber convergido.\n")
     return x
 
 
-# Programa principal
-A, b = ingresar_sistema()
-if A and b:
-    mostrar_sistema(A, b)
-    solucion = gauss_eliminacion(A, b)
-    if solucion:
-        print("\nSolución del sistema:")
-        for i, val in enumerate(solucion):
-            print(f"x[{i + 1}] = {val:.4f}")
+# **Ejecutar el programa**
+A, b = llenarmatriz()
+
+print("\nMatriz ingresada:")
+mostrarmatriz(A, "Matriz de coeficientes")
+
+soluciones = gauss_seidel(A, b)
+print("Soluciones del sistema:", soluciones)
