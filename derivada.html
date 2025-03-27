@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de la Derivada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        canvas {
+            border: 1px solid #000;
+            margin-top: 20px;
+        }
+        .controls {
+            margin: 20px 0;
+        }
+        button {
+            padding: 8px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .explanation {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: left;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .graph-container {
+            flex: 1;
+            min-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animación del Concepto de Derivada</h1>
+
+    <div class="container">
+        <div class="graph-container">
+            <div class="controls">
+                <button id="startBtn">Iniciar Animación</button>
+                <button id="resetBtn">Reiniciar</button>
+            </div>
+
+            <canvas id="derivativeCanvas" width="500" height="400"></canvas>
+
+            <div>
+                <label for="functionSelect">Función: </label>
+                <select id="functionSelect">
+                    <option value="quadratic">x²</option>
+                    <option value="cubic">x³</option>
+                    <option value="sin">sin(x)</option>
+                    <option value="cos">cos(x)</option>
+                </select>
+
+                <label for="pointX">Punto x: </label>
+                <input type="range" id="pointX" min="-2" max="2" step="0.1" value="1">
+                <span id="pointXValue">1</span>
+            </div>
+        </div>
+
+        <div class="explanation">
+            <h2>¿Qué es una derivada?</h2>
+            <p>La derivada de una función en un punto representa la <strong>pendiente de la recta tangente</strong> a la función en ese punto. Matemáticamente, se define como el límite:</p>
+            <p style="text-align: center; font-style: italic;">
+                f'(x) = lim<sub>h→0</sub> [f(x+h) - f(x)] / h
+            </p>
+
+            <h2>¿Cómo esta animación representa la derivada?</h2>
+            <p>La animación muestra:</p>
+            <ol>
+                <li><strong style="color: #3498db;">La función</strong> (en azul) que estamos analizando.</li>
+                <li><strong style="color: #e74c3c;">La recta tangente</strong> (en rojo) cuya pendiente es la derivada en el punto seleccionado.</li>
+                <li><strong style="color: #2ecc71;">La recta secante</strong> (en verde) que conecta dos puntos de la función.</li>
+            </ol>
+
+            <p>Cuando presionas <strong>"Iniciar Animación"</strong>, puedes observar cómo:</p>
+            <ul>
+                <li>El valor de <strong>h</strong> (la distancia entre los puntos) se hace cada vez más pequeño.</li>
+                <li>La recta secante se acerca progresivamente a la recta tangente.</li>
+                <li>La pendiente de la secante se aproxima al valor de la derivada.</li>
+            </ul>
+
+            <p>Este proceso visualiza el concepto de límite en la definición de la derivada: a medida que h tiende a cero, la secante se convierte en la tangente.</p>
+
+            <h2>Interpretación física</h2>
+            <p>La derivada representa la <strong>tasa de cambio instantánea</strong> de la función. Por ejemplo:</p>
+            <ul>
+                <li>Si la función representa posición vs tiempo, la derivada es la velocidad.</li>
+                <li>Si representa velocidad vs tiempo, la derivada es la aceleración.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Configuración del canvas
+        const canvas = document.getElementById('derivativeCanvas');
+        const ctx = canvas.getContext('2d');
+        const startBtn = document.getElementById('startBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const functionSelect = document.getElementById('functionSelect');
+        const pointXSlider = document.getElementById('pointX');
+        const pointXValue = document.getElementById('pointXValue');
+
+        // Variables de animación
+        let animationId = null;
+        let h = 2; // Diferencia inicial entre puntos
+        let animating = false;
+        let pointX = parseFloat(pointXSlider.value);
+
+        // Actualizar valor mostrado del slider
+        pointXSlider.addEventListener('input', function() {
+            pointX = parseFloat(this.value);
+            pointXValue.textContent = pointX.toFixed(1);
+            if (!animating) {
+                drawGraph();
+            }
+        });
+
+        // Cambiar función
+        functionSelect.addEventListener('change', function() {
+            if (!animating) {
+                drawGraph();
+            }
+        });
+
+        // Iniciar animación
+        startBtn.addEventListener('click', function() {
+            if (animating) return;
+
+            animating = true;
+            h = 2;
+            animate();
+        });
+
+        // Reiniciar gráfico
+        resetBtn.addEventListener('click', function() {
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+            animating = false;
+            h = 2;
+            drawGraph();
+        });
+
+        // Funciones matemáticas
+        const functions = {
+            quadratic: x => x * x,
+            cubic: x => x * x * x,
+            sin: x => Math.sin(x) * 2,
+            cos: x => Math.cos(x) * 2
+        };
+
+        // Derivadas de las funciones
+        const derivatives = {
+            quadratic: x => 2 * x,
+            cubic: x => 3 * x * x,
+            sin: x => Math.cos(x) * 2,
+            cos: x => -Math.sin(x) * 2
+        };
+
+        // Convertir coordenadas matemáticas a coordenadas canvas
+        function toCanvasX(x) {
+            return (x + 3) * (canvas.width / 6);
+        }
+
+        function toCanvasY(y) {
+            return canvas.height / 2 - y * (canvas.height / 8);
+        }
+
+        // Convertir coordenadas canvas a matemáticas
+        function toMathX(x) {
+            return (x / (canvas.width / 6)) - 3;
+        }
+
+        function toMathY(y) {
+            return (canvas.height / 2 - y) / (canvas.height / 8);
+        }
+
+        // Dibujar ejes
+        function drawAxes() {
+            ctx.strokeStyle = '#000';
+            ctx.lineWidth = 1;
+
+            // Eje X
+            ctx.beginPath();
+            ctx.moveTo(0, canvas.height / 2);
+            ctx.lineTo(canvas.width, canvas.height / 2);
+            ctx.stroke();
+
+            // Eje Y
+            ctx.beginPath();
+            ctx.moveTo(canvas.width / 2, 0);
+            ctx.lineTo(canvas.width / 2, canvas.height);
+            ctx.stroke();
+
+            // Marcas en los ejes
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            ctx.font = '10px Arial';
+
+            // Marcas eje X
+            for (let x = -2; x <= 2; x++) {
+                const canvasX = toCanvasX(x);
+                ctx.beginPath();
+                ctx.moveTo(canvasX, canvas.height / 2 - 5);
+                ctx.lineTo(canvasX, canvas.height / 2 + 5);
+                ctx.stroke();
+                ctx.fillText(x.toString(), canvasX, canvas.height / 2 + 10);
+            }
+
+            // Marcas eje Y
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'middle';
+            for (let y = -3; y <= 3; y++) {
+                if (y === 0) continue;
+                const canvasY = toCanvasY(y);
+                ctx.beginPath();
+                ctx.moveTo(canvas.width / 2 - 5, canvasY);
+                ctx.lineTo(canvas.width / 2 + 5, canvasY);
+                ctx.stroke();
+                ctx.fillText(y.toString(), canvas.width / 2 - 10, canvasY);
+            }
+        }
+
+        // Dibujar la función seleccionada
+        function drawFunction() {
+            const selectedFunction = functionSelect.value;
+            const func = functions[selectedFunction];
+
+            ctx.strokeStyle = '#3498db';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+
+            let firstPoint = true;
+            for (let canvasX = 0; canvasX <= canvas.width; canvasX++) {
+                const x = toMathX(canvasX);
+                const y = func(x);
+                const canvasY = toCanvasY(y);
+
+                if (firstPoint) {
+                    ctx.moveTo(canvasX, canvasY);
+                    firstPoint = false;
+                } else {
+                    ctx.lineTo(canvasX, canvasY);
+                }
+            }
+
+            ctx.stroke();
+        }
+
+        // Dibujar la recta tangente (derivada)
+        function drawTangentLine() {
+            const selectedFunction = functionSelect.value;
+            const deriv = derivatives[selectedFunction];
+
+            const slope = deriv(pointX);
+            const y0 = functions[selectedFunction](pointX);
+
+            // Ecuación de la recta tangente: y - y0 = m(x - x0)
+            const x1 = pointX - 1;
+            const y1 = y0 + slope * (x1 - pointX);
+            const x2 = pointX + 1;
+            const y2 = y0 + slope * (x2 - pointX);
+
+            ctx.strokeStyle = '#e74c3c';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(toCanvasX(x1), toCanvasY(y1));
+            ctx.lineTo(toCanvasX(x2), toCanvasY(y2));
+            ctx.stroke();
+
+            // Punto de tangencia
+            ctx.fillStyle = '#e74c3c';
+            ctx.beginPath();
+            ctx.arc(toCanvasX(pointX), toCanvasY(y0), 5, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Mostrar valor de la derivada
+            ctx.fillStyle = '#000';
+            ctx.font = '12px Arial';
+            ctx.textAlign = 'left';
+            ctx.fillText(`f'(${pointX.toFixed(1)}) = ${slope.toFixed(2)}`, toCanvasX(pointX) + 10, toCanvasY(y0) - 10);
+        }
+
+        // Dibujar la recta secante
+        function drawSecantLine() {
+            const selectedFunction = functionSelect.value;
+            const func = functions[selectedFunction];
+
+            const x1 = pointX;
+            const y1 = func(x1);
+            const x2 = pointX + h;
+            const y2 = func(x2);
+
+            // Pendiente de la recta secante
+            const slope = (y2 - y1) / (x2 - x1);
+
+            // Dibujar la recta secante
+            ctx.strokeStyle = '#2ecc71';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(toCanvasX(x1 - 1), toCanvasY(y1 + slope * (x1 - 1 - x1)));
+            ctx.lineTo(toCanvasX(x2 + 1), toCanvasY(y2 + slope * (x2 + 1 - x2)));
+            ctx.stroke();
+
+            // Dibujar los puntos
+            ctx.fillStyle = '#2ecc71';
+            ctx.beginPath();
+            ctx.arc(toCanvasX(x1), toCanvasY(y1), 5, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(toCanvasX(x2), toCanvasY(y2), 5, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Dibujar la diferencia h
+            ctx.strokeStyle = '#7f8c8d';
+            ctx.setLineDash([5, 5]);
+            ctx.beginPath();
+            ctx.moveTo(toCanvasX(x1), toCanvasY(y1) + 20);
+            ctx.lineTo(toCanvasX(x2), toCanvasY(y2) + 20);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            ctx.fillStyle = '#000';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            ctx.fillText(`h = ${h.toFixed(2)}`, (toCanvasX(x1) + toCanvasX(x2)) / 2, toCanvasY(y1) + 25);
+
+            // Mostrar pendiente
+            ctx.fillText(`Pendiente secante: ${slope.toFixed(2)}`, canvas.width / 2, 20);
+        }
+
+        // Dibujar todo el gráfico
+        function drawGraph() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawAxes();
+            drawFunction();
+            drawTangentLine();
+
+            if (animating || h < 2) {
+                drawSecantLine();
+            }
+        }
+
+        // Animación
+        function animate() {
+            h *= 0.95;
+
+            if (h < 0.01) {
+                h = 0.01;
+                animating = false;
+            }
+
+            drawGraph();
+
+            if (animating) {
+                animationId = requestAnimationFrame(animate);
+            }
+        }
+
+        // Inicializar
+        drawGraph();
+    </script>
+</body>
+</html>
