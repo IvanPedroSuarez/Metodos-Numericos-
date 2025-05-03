@@ -19,7 +19,7 @@ Todos estos desafíos comparten una realidad: **no pueden resolverse solo con l�
 - ✅ Optimización de procesos en ingeniería y ciencia de datos
 - ✅ Simulación de sistemas complejos (desde modelos climáticos hasta dinámica de fluidos)
 
-![Proceso numérico](https://via.placeholder.com/600x200?text=Diagrama+Flujo+Métodos+Numéricos) <!-- Reemplazar con imagen real -->
+
 
 ---
 
