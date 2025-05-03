@@ -33,23 +33,22 @@ pi_preciso = 3.141592    # 7 cifras significativas
 
 ---
 
-##  Precicios vs Exavtitud 
+##  Precicion vs Exavtitud 
 
--Concepto	                   Definición	                                              Ejemplo
--Precisión	       Consistencia en resultados repetidos.	           Disparos agrupados en un blanco, pero lejos del centro.
--Exactitud	          Proximidad al valor verdadero.	                     Disparos cercanos al centro, aunque dispersos.
+| Concepto   | Definición                              | Ejemplo Visual                  | Representación Matemática       |
+|------------|----------------------------------------|---------------------------------|----------------------------------|
+| **Precisión** | Consistencia en resultados repetidos   | 🎯 → • • • (agrupados pero desviados) | `Desviación estándar pequeña`    |
+| **Exactitud** | Proximidad al valor verdadero          | 🎯 → · · · (dispersos pero cerca del centro) | `Error absoluto pequeño`         |
 
 
-##⚠️ Tipos de Errores mas comunes  en Cálculos Numéricos
-Tipo de Error               	                   Causa	                                             Ejemplo	
-Error de Truncamiento	            Aproximar un proceso infinito con uno finito.	     Usar solo 3 términos de una serie de Taylor.	
+##  Tipos de errores mas comunes en metodos numericos:
 
-Error de Redondeo                    	Limitación en dígitos almacenados.	             1/3 ≈ 0.333... (en computadora: 0.333333).	
-
-Error Absoluto	                 Diferencia entre valor real y aproximado.	    Valor real: π ≈ 3.1416, Aproximación: 3.14 → Error 
-                                                                                               absoluto = 0.0016.
-
-Error Relativo	                   Error en porcentaje respecto al valor real.	         (Error absoluto / Valor real) × 100%.
+| Tipo de Error         | Causa                                                                 | Ejemplo                                                                 | Fórmula/Cálculo                      |
+|-----------------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------|--------------------------------------|
+| **Truncamiento**      | Aproximar un proceso infinito con uno finito                          | Usar solo 3 términos de una serie de Taylor para `sin(x)`               | `Error = Valor real - Valor truncado`|
+| **Redondeo**          | Limitación en dígitos almacenados por la computadora                  | `1/3 ≈ 0.333333` (en lugar de 0.333...)                                | `float(x)` en Python                 |
+| **Absoluto**          | Diferencia entre valor real y aproximado                              | π ≈ 3.1416 vs 3.14 → Error = 0.0016                                    | `\|Valor real - Aproximación\|`      |
+| **Relativo**          | Error en porcentaje respecto al valor real                            | Si error absoluto = 0.1 y valor real = 10 → Error relativo = 1%        | `(Error absoluto / Valor real) × 100%` |
 
 
 #Para poder tener una vision mas amplia de los errores en metodos numericos, se realizo una inveztigacion para realizar un mapa conceptual sobre este subtema en especifico debido a que es un aspecto muy relevante a la hora de trabajar con metodos numericos, dicho mapa fua ademas explicado a travez del sofware canva (Trabajo realizado en equipo): 
