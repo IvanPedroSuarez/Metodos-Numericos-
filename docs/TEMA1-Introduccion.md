@@ -31,11 +31,13 @@ Todos estos desafíos comparten una realidad: **no pueden resolverse solo con l�
 pi_aproximado = 3.14    # 3 cifras significativas
 pi_preciso = 3.141592    # 7 cifras significativas
 
-##2. Precisión vs. Exactitud
+---
 
-Concepto	                   Definición	                                              Ejemplo
-Precisión	       Consistencia en resultados repetidos.	           Disparos agrupados en un blanco, pero lejos del centro.
-Exactitud	          Proximidad al valor verdadero.	                     Disparos cercanos al centro, aunque dispersos.
+##  Precicios vs Exavtitud 
+
+-Concepto	                   Definición	                                              Ejemplo
+-Precisión	       Consistencia en resultados repetidos.	           Disparos agrupados en un blanco, pero lejos del centro.
+-Exactitud	          Proximidad al valor verdadero.	                     Disparos cercanos al centro, aunque dispersos.
 
 
 ##⚠️ Tipos de Errores mas comunes  en Cálculos Numéricos
