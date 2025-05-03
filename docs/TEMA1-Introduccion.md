@@ -61,13 +61,13 @@ pi_preciso = 3.141592    # 7 cifras significativas
 - Ejemplos gráficos de propagación de errores
 - Desarrollo colaborativo en equipo
 
-[![Ver Mapa Conceptual en Canva](https://img.shields.io/badge/Canva-Ver_Mapa_Conceptual-00C4CC?logo=canva&style=for-the-badge)](https://www.canda.com/design/DAGd4cTWnj8)
+[![Ver Mapa Conceptual en Canva](https://www.canva.com/design/DAGd4cTWnj8/TWtBOVQzBepaHcPNFX8W0Q/edit?utm_content=DAGd4cTWnj8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ---
 
 ### 💻 T1-E2: Problemario de Errores Numéricos
 **CActididad enfocada en la demostracion de los diferentes tipos de errores en metodos numericos as como una explicacion de estos.**
-[📦 ver codgios usados para la actividad T1 ----E2    ----      Problemario ](/codigos/tema1-introduccion/)
+[📦 ver codgios usados para la actividad T1 ----E2----Problemario ](/codigos/tema1-introduccion/)
 
 
 ### 
