@@ -31,14 +31,14 @@ Todos estos desafíos comparten una realidad: **no pueden resolverse solo con l�
 pi_aproximado = 3.14    # 3 cifras significativas
 pi_preciso = 3.141592    # 7 cifras significativas
 
-2. Precisión vs. Exactitud
+##2. Precisión vs. Exactitud
 
 Concepto	                   Definición	                                              Ejemplo
 Precisión	       Consistencia en resultados repetidos.	           Disparos agrupados en un blanco, pero lejos del centro.
 Exactitud	          Proximidad al valor verdadero.	                     Disparos cercanos al centro, aunque dispersos.
 
 
-⚠️ Tipos de Errores mas comunes  en Cálculos Numéricos
+##⚠️ Tipos de Errores mas comunes  en Cálculos Numéricos
 Tipo de Error               	                   Causa	                                             Ejemplo	
 Error de Truncamiento	            Aproximar un proceso infinito con uno finito.	     Usar solo 3 términos de una serie de Taylor.	
 
@@ -50,18 +50,18 @@ Error Absoluto	                 Diferencia entre valor real y aproximado.	    Va
 Error Relativo	                   Error en porcentaje respecto al valor real.	         (Error absoluto / Valor real) × 100%.
 
 
-Para poder tener una vision mas amplia de los errores en metodos numericos, se realizo una inveztigacion para realizar un mapa conceptual sobre este subtema en especifico debido a que es un aspecto muy relevante a la hora de trabajar con metodos numericos, dicho mapa fua ademas explicado a travez del sofware canva (Trabajo realizado en equipo): 
+#Para poder tener una vision mas amplia de los errores en metodos numericos, se realizo una inveztigacion para realizar un mapa conceptual sobre este subtema en especifico debido a que es un aspecto muy relevante a la hora de trabajar con metodos numericos, dicho mapa fua ademas explicado a travez del sofware canva (Trabajo realizado en equipo): 
 
-[Ver actividad T1   --- E1 ----    Mapa Conceptual/presentación](https://www.canva.com/design/DAGd4cTWnj8/TWtBOVQzBepaHcPNFX8W0Q/edit?utm_content=DAGd4cTWnj8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
-
-Una vez entendido estos conceptos se realizo un problemario donde se registraban diferentes ejemplos de programas hechos en pyton, donde ocurrian los erroes anteriormente presentados, ademas de una explicacion del porque ocurrian, todo esto para entender como poder evitar estos inconvenientes a la hora de realizar algun trabjo que involucre metodos numericos.
-
-[📦 ver codgios usados para la actividad T1 ----E2    ----      Problemario ](/codigos/tema1-introduccion/)
+#[Ver actividad T1   --- E1 ----    Mapa Conceptual/presentación](https://www.canva.com/design/DAGd4cTWnj8/TWtBOVQzBepaHcPNFX8W0Q/edit?utm_content=DAGd4cTWnj8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 
+#Una vez entendido estos conceptos se realizo un problemario donde se registraban diferentes ejemplos de programas hechos en pyton, donde ocurrian los erroes anteriormente presentados, ademas de una explicacion del porque ocurrian, todo esto para entender como poder evitar estos inconvenientes a la hora de realizar algun trabjo que involucre metodos numericos.
 
-Finalmente se realizo una evaluacion en linea para reforzar los conocimientos adquiridos. 
+#[📦 ver codgios usados para la actividad T1 ----E2    ----      Problemario ](/codigos/tema1-introduccion/)
+
+
+
+#Finalmente se realizo una evaluacion en linea para reforzar los conocimientos adquiridos. 
 
 
 
