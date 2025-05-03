@@ -51,25 +51,27 @@ pi_preciso = 3.141592    # 7 cifras significativas
 | **Relativo**          | Error en porcentaje respecto al valor real                            | Si error absoluto = 0.1 y valor real = 10 → Error relativo = 1%        | `(Error absoluto / Valor real) × 100%` |
 
 
-#Para poder tener una vision mas amplia de los errores en metodos numericos, se realizo una inveztigacion para realizar un mapa conceptual sobre este subtema en especifico debido a que es un aspecto muy relevante a la hora de trabajar con metodos numericos, dicho mapa fua ademas explicado a travez del sofware canva (Trabajo realizado en equipo): 
+## 🎓 Actividades de Aprendizaje
 
-#[Ver actividad T1   --- E1 ----    Mapa Conceptual/presentación](https://www.canva.com/design/DAGd4cTWnj8/TWtBOVQzBepaHcPNFX8W0Q/edit?utm_content=DAGd4cTWnj8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+### 📊 T1-E1: Mapa Conceptual de Errores
+**Objetivo:** Visualizar las relaciones entre los tipos de errores numéricos mediante un diagrama interactivo.
+
+🔹 *Características principales:*
+- Análisis comparativo entre errores de truncamiento y redondeo
+- Ejemplos gráficos de propagación de errores
+- Desarrollo colaborativo en equipo
+
+[![Ver Mapa Conceptual en Canva](https://img.shields.io/badge/Canva-Ver_Mapa_Conceptual-00C4CC?logo=canva&style=for-the-badge)](https://www.canda.com/design/DAGd4cTWnj8)
+
+---
+
+### 💻 T1-E2: Problemario de Errores Numéricos
+**CActididad enfocada en la demostracion de los diferentes tipos de errores en metodos numericos as como una explicacion de estos.**
+[📦 ver codgios usados para la actividad T1 ----E2    ----      Problemario ](/codigos/tema1-introduccion/)
 
 
-#Una vez entendido estos conceptos se realizo un problemario donde se registraban diferentes ejemplos de programas hechos en pyton, donde ocurrian los erroes anteriormente presentados, ademas de una explicacion del porque ocurrian, todo esto para entender como poder evitar estos inconvenientes a la hora de realizar algun trabjo que involucre metodos numericos.
-
-#[📦 ver codgios usados para la actividad T1 ----E2    ----      Problemario ](/codigos/tema1-introduccion/)
-
-
-
-#Finalmente se realizo una evaluacion en linea para reforzar los conocimientos adquiridos. 
-
-
-
-
-
-
-
-
+### 
+**Evaluacion**
+- Finalmente se realizo una evaluacion en linea para reforzar todos los conocimientos adquiridos.
 
 
