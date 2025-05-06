@@ -8,7 +8,7 @@ Repositorio completo con teoría, implementaciones y ejemplos de la materia de M
 
 | Tema | Documentación | Implementaciones |
 |------|---------------|------------------|
-| 1. Introducción a MN | [Ver teoría](/docs/TEMA1-Introduccion.md) | [Códigos](/codigos/tema1) |
+| 1. Introducción a MN | [Ver teoría](/docs/TEMA1-Introduccion.md) | [Códigos](/codigos/tema1/Errores.py) |
 | 2. Solución de Ecuaciones | [Ver teoría](/docs/TEMA2-Ecuaciones.md) | [Códigos](/codigos/tema2) |
 | 3. Sistemas de Ecuaciones | [Ver teoría](/docs/TEMA3-Sistemas.md) | [Códigos](/codigos/tema3) |
 | 4. Diferenciación e Integración | [Ver teoría](/docs/TEMA4-Integracion.md) | [Códigos](/codigos/tema4) |
