@@ -1,4 +1,4 @@
-# 📊 Métodos Numéricos - Universidad [Nombre]
+# 📊 Métodos Numéricos - ITESA
 
 ![Banner matemático](https://ejemplo.com/banner-matematicas.png) <!-- Opcional -->
 
