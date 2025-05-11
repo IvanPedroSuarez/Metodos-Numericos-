@@ -71,7 +71,7 @@ Este ejercicio muestra cómo la acumulación de pequeños errores en operaciones
 Enunciado:
 Realiza una suma repetida de un número decimal pequeño (por ejemplo, 0.0001) muchas veces y compara el resultado obtenido con el valor esperado. Calcula el error absoluto y relativo.
 
-🔗 Ver Codigo en python (./codigos/tema1/Error%20de%20precision.py)
+[🔗 Ver código de error de precisión (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema1/Error%20de%20precision.py)
 
 2️⃣ Errores de Redondeo
 Descripción breve:
