@@ -61,7 +61,44 @@ pi_preciso = 3.141592 # 7 cifras significativas
 [[Ver Mapa Conceptual en Canva](https://www.canva.com/design/DAGd4cTWnj8/TWtBOVQzBepaHcPNFX8W0Q/edit?utm_content=DAGd4cTWnj8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ---
+### 💻 T1-E2: Problemario de Errores Numéricos
 
+> **Actividad enfocada en la demostración de los diferentes tipos de errores en métodos numéricos así como una explicación de estos.**
+
+### 1️⃣ Errores de Precisión
+
+**Código de ejemplo:**
+python
+Copy Code
+# Ejemplo de error de precisión con suma repetida
+suma = 0
+for i in range(10000):
+    suma += 0.0001
+
+print(f"Valor esperado: 1.0")
+print(f"Valor obtenido: {suma}")
+print(f"Error absoluto: {abs(suma - 1.0)}")
+print(f"Error relativo: {abs(suma - 1.0) / 1.0}")
+🔍 Observación: Este ejemplo muestra cómo la acumulación de pequeños errores en operaciones repetidas puede llevar a resultados ligeramente diferentes de los esperados.
+
+2️⃣ Errores de Redondeo
+Código de ejemplo:
+
+python
+Copy Code
+# Ejemplo de error de redondeo con números decimales
+x = 0.1 + 0.1 + 0.1
+print(f"Valor esperado: 0.3")
+print(f"Valor obtenido: {x}")
+print(f"Error absoluto: {abs(x - 0.3)}")
+print(f"Error relativo: {abs(x - 0.3) / 0.3}")
+💡 Nota: Este error ocurre debido a que 0.1 no puede representarse exactamente en binario, llevando a pequeñas discrepancias en los cálculos.
+
+3️⃣ Errores de Truncamiento
+Código de ejemplo:
+
+python
+Copy Code
 import math
 
 # Ejemplo de error de truncamiento: Aproximación de e usando series de Taylor
@@ -79,6 +116,7 @@ print(f"Valor esperado (e): {e_real}")
 print(f"Valor aproximado: {e_aproximado}")
 print(f"Error absoluto: {abs(e_real - e_aproximado)}")
 print(f"Error relativo: {abs(e_real - e_aproximado) / e_real}")
+📝 Explicación: Este ejemplo muestra cómo el error de truncamiento ocurre al aproximar una serie infinita con un número finito de términos.
 
 ### Evaluación
 - Finalmente se realizo una evaluacion en linea para reforzar todos los conocimientos adquiridos.
