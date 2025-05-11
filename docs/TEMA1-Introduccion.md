@@ -61,62 +61,35 @@ pi_preciso = 3.141592 # 7 cifras significativas
 [[Ver Mapa Conceptual en Canva](https://www.canva.com/design/DAGd4cTWnj8/TWtBOVQzBepaHcPNFX8W0Q/edit?utm_content=DAGd4cTWnj8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ---
-### 💻 T1-E2: Problemario de Errores Numéricos
+💻 T1-E2: Problemario de Errores Numéricos
+Actividad enfocada en la demostración de los diferentes tipos de errores en métodos numéricos, así como una explicación de estos.
 
-> **Actividad enfocada en la demostración de los diferentes tipos de errores en métodos numéricos así como una explicación de estos.**
+1️⃣ Errores de Precisión
+Descripción breve:
+Este ejercicio muestra cómo la acumulación de pequeños errores en operaciones repetidas puede llevar a resultados ligeramente diferentes de los esperados, debido a la representación finita de los números en la computadora.
 
-### 1️⃣ Errores de Precisión
+Enunciado:
+Realiza una suma repetida de un número decimal pequeño (por ejemplo, 0.0001) muchas veces y compara el resultado obtenido con el valor esperado. Calcula el error absoluto y relativo.
 
-**Código de ejemplo:**
-python
-Copy Code
-# Ejemplo de error de precisión con suma repetida
-suma = 0
-for i in range(10000):
-    suma += 0.0001
-
-print(f"Valor esperado: 1.0")
-print(f"Valor obtenido: {suma}")
-print(f"Error absoluto: {abs(suma - 1.0)}")
-print(f"Error relativo: {abs(suma - 1.0) / 1.0}")
-🔍 Observación: Este ejemplo muestra cómo la acumulación de pequeños errores en operaciones repetidas puede llevar a resultados ligeramente diferentes de los esperados.
+🔗 Ver Codigo en python (./codigos/tema1/Error%20de%20precision.py)
 
 2️⃣ Errores de Redondeo
-Código de ejemplo:
+Descripción breve:
+Este ejercicio ilustra cómo la representación binaria de ciertos decimales (como 0.1) puede causar pequeñas discrepancias en los cálculos, generando errores de redondeo.
 
-python
-Copy Code
-# Ejemplo de error de redondeo con números decimales
-x = 0.1 + 0.1 + 0.1
-print(f"Valor esperado: 0.3")
-print(f"Valor obtenido: {x}")
-print(f"Error absoluto: {abs(x - 0.3)}")
-print(f"Error relativo: {abs(x - 0.3) / 0.3}")
-💡 Nota: Este error ocurre debido a que 0.1 no puede representarse exactamente en binario, llevando a pequeñas discrepancias en los cálculos.
+Enunciado:
+Suma el número 0.1 tres veces y compara el resultado con 0.3. Calcula el error absoluto y relativo.
+
+🔗 Ver código de error de redondeo (Python)
 
 3️⃣ Errores de Truncamiento
-Código de ejemplo:
+Descripción breve:
+Este ejercicio demuestra cómo el error de truncamiento ocurre al aproximar una serie infinita (como la de Taylor para e) usando un número finito de términos.
 
-python
-Copy Code
-import math
+Enunciado:
+Aproxima el número e utilizando la serie de Taylor con un número limitado de términos. Compara el valor aproximado con el valor real y calcula el error absoluto y relativo.
 
-# Ejemplo de error de truncamiento: Aproximación de e usando series de Taylor
-def aproximar_e(n):
-    e_aprox = 0
-    for i in range(n):
-        e_aprox += 1 / math.factorial(i)
-    return e_aprox
-
-n_terminos = 5
-e_aproximado = aproximar_e(n_terminos)
-e_real = math.e
-
-print(f"Valor esperado (e): {e_real}")
-print(f"Valor aproximado: {e_aproximado}")
-print(f"Error absoluto: {abs(e_real - e_aproximado)}")
-print(f"Error relativo: {abs(e_real - e_aproximado) / e_real}")
-📝 Explicación: Este ejemplo muestra cómo el error de truncamiento ocurre al aproximar una serie infinita con un número finito de términos.
+🔗 Ver código de error de truncamiento (Python)
 
 ### Evaluación
 - Finalmente se realizo una evaluacion en linea para reforzar todos los conocimientos adquiridos.
