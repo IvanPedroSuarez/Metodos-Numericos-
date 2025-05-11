@@ -19,29 +19,27 @@ Todos estos desafíos comparten una realidad: **no pueden resolverse solo con l�
 - ✅ Optimización de procesos en ingeniería y ciencia de datos
 - ✅ Simulación de sistemas complejos (desde modelos climáticos hasta dinámica de fluidos)
 
-
-
 ---
 
 ## 🔍 Conceptos Básicos
 
 ### 1. Cifras Significativas
 
-# Ejemplo práctico
-pi_aproximado = 3.14    # 3 cifras significativas
-pi_preciso = 3.141592    # 7 cifras significativas
+Ejemplo práctico
+pi_aproximado = 3.14 # 3 cifras significativas
+pi_preciso = 3.141592 # 7 cifras significativas
+
 
 ---
 
-##  Precicion vs Exavtitud 
+## Precicion vs Exavtitud
 
 | Concepto   | Definición                              | Ejemplo Visual                  | Representación Matemática       |
 |------------|----------------------------------------|---------------------------------|----------------------------------|
 | **Precisión** | Consistencia en resultados repetidos   | 🎯 → • • • (agrupados pero desviados) | `Desviación estándar pequeña`    |
 | **Exactitud** | Proximidad al valor verdadero          | 🎯 → · · · (dispersos pero cerca del centro) | `Error absoluto pequeño`         |
 
-
-##  Tipos de errores mas comunes en metodos numericos:
+## Tipos de errores mas comunes en metodos numericos:
 
 | Tipo de Error         | Causa                                                                 | Ejemplo                                                                 | Fórmula/Cálculo                      |
 |-----------------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------|--------------------------------------|
@@ -49,7 +47,6 @@ pi_preciso = 3.141592    # 7 cifras significativas
 | **Redondeo**          | Limitación en dígitos almacenados por la computadora                  | `1/3 ≈ 0.333333` (en lugar de 0.333...)                                | `float(x)` en Python                 |
 | **Absoluto**          | Diferencia entre valor real y aproximado                              | π ≈ 3.1416 vs 3.14 → Error = 0.0016                                    | `\|Valor real - Aproximación\|`      |
 | **Relativo**          | Error en porcentaje respecto al valor real                            | Si error absoluto = 0.1 y valor real = 10 → Error relativo = 1%        | `(Error absoluto / Valor real) × 100%` |
-
 
 ## 🎓 Actividades de Aprendizaje
 
@@ -65,13 +62,23 @@ pi_preciso = 3.141592    # 7 cifras significativas
 
 ---
 
-### 💻 T1-E2: Problemario de Errores Numéricos
-**CActididad enfocada en la demostracion de los diferentes tipos de errores en metodos numericos as como una explicacion de estos.**
-[📦 ver codgios usados para la actividad T1 ----E2----Problemario ](/codigos/tema1-introduccion/)
+import math
 
+# Ejemplo de error de truncamiento: Aproximación de e usando series de Taylor
+def aproximar_e(n):
+    e_aprox = 0
+    for i in range(n):
+        e_aprox += 1 / math.factorial(i)
+    return e_aprox
 
-### 
-**Evaluacion**
+n_terminos = 5
+e_aproximado = aproximar_e(n_terminos)
+e_real = math.e
+
+print(f"Valor esperado (e): {e_real}")
+print(f"Valor aproximado: {e_aproximado}")
+print(f"Error absoluto: {abs(e_real - e_aproximado)}")
+print(f"Error relativo: {abs(e_real - e_aproximado) / e_real}")
+
+### Evaluación
 - Finalmente se realizo una evaluacion en linea para reforzar todos los conocimientos adquiridos.
-
-
