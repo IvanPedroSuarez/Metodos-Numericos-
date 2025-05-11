@@ -80,7 +80,7 @@ Este ejercicio ilustra cómo la representación binaria de ciertos decimales (co
 Enunciado:
 Suma el número 0.1 tres veces y compara el resultado con 0.3. Calcula el error absoluto y relativo.
 
-🔗 Ver código de error de redondeo (Python)
+[🔗 Ver código de error de redondeo (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema1/Error%20de%20redondeo.py)
 
 3️⃣ Errores de Truncamiento
 Descripción breve:
@@ -89,7 +89,6 @@ Este ejercicio demuestra cómo el error de truncamiento ocurre al aproximar una 
 Enunciado:
 Aproxima el número e utilizando la serie de Taylor con un número limitado de términos. Compara el valor aproximado con el valor real y calcula el error absoluto y relativo.
 
-🔗 Ver código de error de truncamiento (Python)
-
+[🔗 Ver código de error de truncamiento (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema1/Error%20de%20truncamiento.py)
 ### Evaluación
 - Finalmente se realizo una evaluacion en linea para reforzar todos los conocimientos adquiridos.
