@@ -1,4 +1,4 @@
-##ERROR DE PRECISION - EJEMPLO EN PYTHON##
+ERROR DE PRECISION - EJEMPLO EN PYTHON
 
 # Inicializamos la variable suma en 0
 suma = 0
