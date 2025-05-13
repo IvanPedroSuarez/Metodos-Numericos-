@@ -55,6 +55,9 @@ Se seleccionan los extremos del intervalo, se verifica el cambio de signo, se ca
 **Resultado:**  
 Después de varias iteraciones, se obtiene una raíz aproximada en \( x \approx 2.924 \).
 
+[🔗 Ver código de metodo de biseccion (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/Método%20de%20biseccion.py)
+
+
 ---
 
 #### 2. Método de la Regla Falsa
