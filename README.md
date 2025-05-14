@@ -1,6 +1,6 @@
 # 💻 Métodos Numéricos para Sistemas Computacionales - ITESA
 
-![Banner de análisis numérico computacional](https://ejemplo.com/banner-computacional.png)
+
 
 > Repositorio especializado en la **implementación computacional de métodos numéricos**
 
@@ -28,8 +28,8 @@ Los métodos numéricos permiten resolver problemas complejos que no tienen solu
 
 ## 🧮 Módulos Implementados
 
-| # | Tema | Documentación | Código Fuente | Aplicación en Sistemas |
-|:-:|------|---------------|----------------|--------------------------|
+| # | Tema | Documentación | Códigos  |
+|:-:|------|---------------|----------------|
 | 1 | Introducción a los métodos numéricos | [📘 Teoría](/docs/TEMA1.md) | [🐍 Python](/codigos/tema1/) 
 | 2 | Solución de ecuaciones no lineales | [📘 Teoría](/docs/TEMA2.md) | [🐍 Python](/codigos/tema2) 
 | 3 | Sistemas de ecuaciones lineales | [📘 Teoría](/docs/TEMA3.md) | [🐍 Python](/codigos/tema3) 
