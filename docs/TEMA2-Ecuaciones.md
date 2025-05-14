@@ -148,10 +148,12 @@ Cada ejercicio incluye el análisis del procedimiento, la interpretación de res
 
 ---
 
-### 🚀 T2-E3: Proyecto Integrador
+### 🚀 T2   --   E3  --- Proyecto
 
 **Descripción:**  
-Desarrollo de una aplicación que implemente múltiples métodos de solución de ecuaciones no lineales, con interfaz gráfica para visualización, comparación de resultados y generación de reportes de convergencia.
+Para la evaluación del tema el docente planteo una funcion de la cual se debia obtener la raiz usando el metodo de la regla falsa usando Excel. 
+[🔗 Ver documento de la evaluacion en formato .xlsx, ](https://docs.google.com/spreadsheets/d/1tnfnVd17U6HjCpkTi4_rgPxPFfid86v9/edit?usp=sharing&ouid=114454402532269181538&rtpof=true&sd=true)
+
 
 ---
 
