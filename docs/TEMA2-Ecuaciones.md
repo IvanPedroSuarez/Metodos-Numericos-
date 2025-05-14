@@ -57,8 +57,7 @@ Aproximar la raíz de la función \( f(x) = x^3 - 25 \) en el intervalo \([1, 3]
 **Procedimiento:**  
 Se seleccionan los extremos del intervalo, se verifica el cambio de signo, se calcula el punto medio y se repite el proceso hasta alcanzar la precisión deseada.
 
-**Resultado:**  
-Después de varias iteraciones, se obtiene una raíz aproximada en \( x \approx 2.924 \).
+
 
 [🔗 Ver código de método de bisección (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/Método%20de%20biseccion.py)
 
@@ -75,8 +74,7 @@ Encontrar la raíz de \( f(x) = x^3 - x - 1 \) en el intervalo \([1, 2]\).
 **Procedimiento:**  
 Se usan los extremos del intervalo y la fórmula de la regla falsa para aproximar la raíz, actualizando el intervalo en cada iteración.
 
-**Resultado:**  
-El método converge a una raíz aproximada dentro del intervalo.
+
 
 [🔗 Ver código de método de regla falsa (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/Método%20de%20regla%20falsa.py)
 
@@ -93,8 +91,7 @@ Resolver \( f(x) = e^{-x} - x \) usando la función de iteración \( x = e^{-x} 
 **Procedimiento:**  
 Se elige un valor inicial y se itera usando la función de punto fijo hasta que el error absoluto sea suficientemente pequeño.
 
-**Resultado:**  
-La raíz se aproxima a \( x \approx 0.5671 \).
+
 
 [🔗 Ver código de método de punto fijo (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/Método%20de%20punto%20fijo.py)
 
@@ -111,8 +108,7 @@ Determinar la raíz de \( f(x) = x^3 - x - 1 \) usando un valor inicial \( x_0 =
 **Procedimiento:**  
 Se calcula la derivada, se aplica la fórmula de Newton-Raphson y se repite hasta alcanzar la tolerancia deseada.
 
-**Resultado:**  
-El método converge rápidamente a la raíz real de la función.
+
 
 [🔗 Ver código de método de Newton-Raphson (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/Método%20de%20newton-raphson.py)
 
@@ -129,8 +125,7 @@ Encontrar la raíz de \( f(x) = \cos(x) - x \) usando valores iniciales \( x_0 =
 **Procedimiento:**  
 Se aplica la fórmula de la secante iterativamente hasta que el error relativo sea suficientemente pequeño.
 
-**Resultado:**  
-La raíz se aproxima a \( x \approx 0.739 \).
+
 
 [🔗 Ver código de método de la secante (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/Método%20de%20la%20secante.py)
 
