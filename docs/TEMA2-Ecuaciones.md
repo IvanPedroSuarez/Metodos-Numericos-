@@ -28,14 +28,26 @@ En estos escenarios, los **métodos numéricos** se convierten en herramientas e
 
 ### 📊 T2-E1: Exposición de Métodos Numéricos
 
-**Objetivo:**  
-Presentar y comparar los diferentes métodos numéricos para la solución de ecuaciones no lineales, destacando sus fundamentos, ventajas, limitaciones y aplicaciones prácticas.
+**Indicaciones del docente**  
+Conformarse en equipo e investigar los diferentes métodos de solución para una ecuación ( bisección , regla falta, interpolación, secante , etc), y entregar un reporte o tabla comparativa.
 
-**Incluye:**
-- Análisis comparativo de métodos.
-- Ejemplos prácticos de aplicación.
-- Demostraciones de implementación en Python.
-- Discusión de ventajas y limitaciones.
+El metodo asignado fue el de la secante (actividad realizada en equipo), donde se abaracaron los siguientes puntos 
+
+
+- Introducción del metodo
+- ¿Qué es?
+- Fórmula
+- Pasos para aplicar el método
+- Requisitos para aplicar el método
+- Ejemplo (video)
+- Aplicaciones
+- Ventajas y Desventajas
+- Errores
+- Tabla comparativa
+- Desafío
+- Conclusión General.
+
+[🔗 Ver presentacion sobre el metodo de la secante (Canva)](https://www.canva.com/design/DAGe18Zxr5k/NBIKlX_VZRux4u_mbS9y4A/edit?utm_content=DAGe18Zxr5k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ---
 
