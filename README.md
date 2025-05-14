@@ -30,12 +30,12 @@ Los métodos numéricos permiten resolver problemas complejos que no tienen solu
 
 | # | Tema | Documentación | Código Fuente | Aplicación en Sistemas |
 |:-:|------|---------------|----------------|--------------------------|
-| 1 | Introducción a los métodos numéricos | [📘 Teoría](/docs/TEMA1.md) | [🐍 Python](/codigos/tema1/) | Fundamentos para simulaciones |
-| 2 | Solución de ecuaciones no lineales | [📘 Teoría](/docs/TEMA2.md) | [💻 C++](/codigos/tema2) | Optimización de procesos |
-| 3 | Sistemas de ecuaciones lineales | [📘 Teoría](/docs/TEMA3.md) | [☕ Java](/codigos/tema3) | Análisis de redes y estructuras |
-| 4 | Diferenciación e integración numérica | [📘 Teoría](/docs/TEMA4.md) | [🐍 Python](/codigos/tema4) | Filtros digitales y señales |
-| 5 | Interpolación y ajuste de datos | [📘 Teoría](/docs/TEMA5.md) | [🌐 JavaScript](/codigos/tema5) | Gráficos computacionales |
-| 6 | Ecuaciones diferenciales ordinarias | [📘 Teoría](/docs/TEMA6.md) | [🔷 C#](/codigos/tema6) | Simulaciones físicas en tiempo real |
+| 1 | Introducción a los métodos numéricos | [📘 Teoría](/docs/TEMA1.md) | [🐍 Python](/codigos/tema1/) 
+| 2 | Solución de ecuaciones no lineales | [📘 Teoría](/docs/TEMA2.md) | [🐍 Python](/codigos/tema2) 
+| 3 | Sistemas de ecuaciones lineales | [📘 Teoría](/docs/TEMA3.md) | [🐍 Python](/codigos/tema3) 
+| 4 | Diferenciación e integración numérica | [📘 Teoría](/docs/TEMA4.md) | [🐍 Python](/codigos/tema4)
+| 5 | Interpolación y ajuste de datos | [📘 Teoría](/docs/TEMA5.md) | [🐍 Python](/codigos/tema5) 
+| 6 | Ecuaciones diferenciales ordinarias | [📘 Teoría](/docs/TEMA6.md) | [🐍 Python](/codigos/tema6) 
 
 ---
 
