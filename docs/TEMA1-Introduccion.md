@@ -92,4 +92,6 @@ Aproxima el número e utilizando la serie de Taylor con un número limitado de t
 [🔗 Ver código de error de truncamiento (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema1/Error%20de%20truncamiento.py)
 ### T1-E3-Eval Escrita
 - Finalmente se realizo una evaluacion en linea para reforzar todos los conocimientos adquiridos.
+
+---
 [⬅️ Volver al README principal](../README.md)
