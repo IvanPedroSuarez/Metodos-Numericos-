@@ -30,8 +30,8 @@ Los métodos numéricos permiten resolver problemas complejos que no tienen solu
 
 | # | Tema | Documentación | Códigos  |
 |:-:|------|---------------|----------------|
-| 1 | Introducción a los métodos numéricos | [📘 Teoría](/docs/TEMA1.md) | [🐍 Python](/codigos/tema1/) 
-| 2 | Solución de ecuaciones no lineales | [📘 Teoría](/docs/TEMA2.md) | [🐍 Python](/codigos/tema2) 
+| 1 | Introducción a los métodos numéricos | [📘 Teoría](/docs/TEMA1-Introduccion.md) | [🐍 Python](/codigos/tema1/) 
+| 2 | Solución de ecuaciones no lineales | [📘 Teoría](/docs/TEMA2-Ecuaciones.md) | [🐍 Python](/codigos/tema2) 
 | 3 | Sistemas de ecuaciones lineales | [📘 Teoría](/docs/TEMA3.md) | [🐍 Python](/codigos/tema3) 
 | 4 | Diferenciación e integración numérica | [📘 Teoría](/docs/TEMA4.md) | [🐍 Python](/codigos/tema4)
 | 5 | Interpolación y ajuste de datos | [📘 Teoría](/docs/TEMA5.md) | [🐍 Python](/codigos/tema5) 
