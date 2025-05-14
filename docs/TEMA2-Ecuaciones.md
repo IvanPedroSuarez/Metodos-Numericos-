@@ -42,12 +42,17 @@ Presentar y comparar los diferentes métodos numéricos para la solución de ecu
 ### 💻 T2-E2: Problemario de Métodos de Solución
 
 **Descripción:**  
-Ejercicios prácticos enfocados en la aplicación de los métodos numéricos para encontrar raíces de ecuaciones no lineales. Cada subapartado corresponde a un método diferente, con ejemplos representativos.
+Ejercicios prácticos enfocados en la aplicación de los métodos numéricos para encontrar raíces de ecuaciones no lineales. Cada subapartado describe brevemente el método utilizado y presenta un ejercicio representativo, resuelto con Python.
+
+---
 
 #### 1. Método de Bisección
 
-**Ejemplo:**  
-Aproxima la raíz de \( f(x) = x^3 - 25 \) en el intervalo \([1, 3]\).
+**Descripción del método:**  
+El método de bisección es un procedimiento iterativo que consiste en dividir repetidamente un intervalo en dos mitades y seleccionar la subintervalo donde ocurre un cambio de signo, garantizando así la existencia de una raíz. Es un método robusto y siempre converge si la función es continua y hay cambio de signo.
+
+**Ejercicio resuelto:**  
+Aproximar la raíz de la función \( f(x) = x^3 - 25 \) en el intervalo \([1, 3]\).
 
 **Procedimiento:**  
 Se seleccionan los extremos del intervalo, se verifica el cambio de signo, se calcula el punto medio y se repite el proceso hasta alcanzar la precisión deseada.
@@ -55,15 +60,17 @@ Se seleccionan los extremos del intervalo, se verifica el cambio de signo, se ca
 **Resultado:**  
 Después de varias iteraciones, se obtiene una raíz aproximada en \( x \approx 2.924 \).
 
-[🔗 Ver código de metodo de biseccion (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/Método%20de%20biseccion.py)
-
+[🔗 Ver código de método de bisección (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/Método%20de%20biseccion.py)
 
 ---
 
 #### 2. Método de la Regla Falsa
 
-**Ejemplo:**  
-Encuentra la raíz de \( f(x) = x^3 - x - 1 \) en el intervalo \([1, 2]\).
+**Descripción del método:**  
+La regla falsa, o método de falsa posición, es similar a la bisección pero utiliza una aproximación lineal entre los extremos del intervalo para estimar la raíz. Es más rápido que la bisección en muchos casos, aunque puede estancarse si la función es muy asimétrica.
+
+**Ejercicio resuelto:**  
+Encontrar la raíz de \( f(x) = x^3 - x - 1 \) en el intervalo \([1, 2]\).
 
 **Procedimiento:**  
 Se usan los extremos del intervalo y la fórmula de la regla falsa para aproximar la raíz, actualizando el intervalo en cada iteración.
@@ -71,12 +78,17 @@ Se usan los extremos del intervalo y la fórmula de la regla falsa para aproxima
 **Resultado:**  
 El método converge a una raíz aproximada dentro del intervalo.
 
+[🔗 Ver código de método de regla falsa (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/Método%20de%20regla%20falsa.py)
+
 ---
 
 #### 3. Método de Punto Fijo
 
-**Ejemplo:**  
-Resuelve \( f(x) = e^{-x} - x \) usando una función de iteración adecuada, por ejemplo \( x = e^{-x} \).
+**Descripción del método:**  
+El método de punto fijo transforma la ecuación original en una forma iterativa \( x = g(x) \) y utiliza una suposición inicial para generar una sucesión que converge a la raíz, siempre que la función de iteración cumpla ciertas condiciones de convergencia.
+
+**Ejercicio resuelto:**  
+Resolver \( f(x) = e^{-x} - x \) usando la función de iteración \( x = e^{-x} \).
 
 **Procedimiento:**  
 Se elige un valor inicial y se itera usando la función de punto fijo hasta que el error absoluto sea suficientemente pequeño.
@@ -84,12 +96,17 @@ Se elige un valor inicial y se itera usando la función de punto fijo hasta que 
 **Resultado:**  
 La raíz se aproxima a \( x \approx 0.5671 \).
 
+[🔗 Ver código de método de punto fijo (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/Método%20de%20punto%20fijo.py)
+
 ---
 
 #### 4. Método de Newton-Raphson
 
-**Ejemplo:**  
-Determina la raíz de \( f(x) = x^3 - x - 1 \) usando un valor inicial \( x_0 = 1.5 \).
+**Descripción del método:**  
+El método de Newton-Raphson utiliza la derivada de la función para construir una sucesión que converge rápidamente a la raíz, partiendo de una suposición inicial. Es muy eficiente, pero requiere que la derivada no sea cero y que la suposición inicial esté cerca de la raíz.
+
+**Ejercicio resuelto:**  
+Determinar la raíz de \( f(x) = x^3 - x - 1 \) usando un valor inicial \( x_0 = 1.5 \).
 
 **Procedimiento:**  
 Se calcula la derivada, se aplica la fórmula de Newton-Raphson y se repite hasta alcanzar la tolerancia deseada.
@@ -97,12 +114,17 @@ Se calcula la derivada, se aplica la fórmula de Newton-Raphson y se repite hast
 **Resultado:**  
 El método converge rápidamente a la raíz real de la función.
 
+[🔗 Ver código de método de Newton-Raphson (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/Método%20de%20newton-raphson.py)
+
 ---
 
 #### 5. Método de la Secante
 
-**Ejemplo:**  
-Encuentra la raíz de \( f(x) = \cos(x) - x \) usando valores iniciales \( x_0 = 0.5 \) y \( x_1 = 1 \).
+**Descripción del método:**  
+El método de la secante es una variante del método de Newton-Raphson que no requiere el cálculo de la derivada. Utiliza dos aproximaciones iniciales y construye una sucesión usando una secante entre los puntos.
+
+**Ejercicio resuelto:**  
+Encontrar la raíz de \( f(x) = \cos(x) - x \) usando valores iniciales \( x_0 = 0.5 \) y \( x_1 = 1 \).
 
 **Procedimiento:**  
 Se aplica la fórmula de la secante iterativamente hasta que el error relativo sea suficientemente pequeño.
@@ -110,10 +132,12 @@ Se aplica la fórmula de la secante iterativamente hasta que el error relativo s
 **Resultado:**  
 La raíz se aproxima a \( x \approx 0.739 \).
 
+[🔗 Ver código de método de la secante (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/Método%20de%20la%20secante.py)
+
 ---
 
 Cada ejercicio incluye el análisis del procedimiento, la interpretación de resultados y la discusión de posibles dificultades o casos especiales.  
-[🔗 Ver códigos de implementación](https://github.com/tu-usuario/tu-repo/tree/master/tema2)
+[🔗 Ver todos los códigos de implementación](https://github.com/IvanPedroSuarez/Metodos-Numericos-/tree/master/codigos/tema2)
 
 ---
 
