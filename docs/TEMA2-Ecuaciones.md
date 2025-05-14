@@ -157,12 +157,5 @@ Para la evaluación del tema el docente planteo una funcion de la cual se debia 
 
 ---
 
-## 📈 Criterios de Evaluación
-
-- Exposición (30%)
-- Problemario (40%)
-- Proyecto (30%)
-
----
 
 [⬅️ Volver al README principal](../README.md)
