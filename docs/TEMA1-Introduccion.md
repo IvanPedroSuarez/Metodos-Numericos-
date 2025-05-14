@@ -90,7 +90,7 @@ Enunciado:
 Aproxima el número e utilizando la serie de Taylor con un número limitado de términos. Compara el valor aproximado con el valor real y calcula el error absoluto y relativo.
 
 [🔗 Ver código de error de truncamiento (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema1/Error%20de%20truncamiento.py)
-### Evaluación
+### T1-E3-Eval Escrita
 - Finalmente se realizo una evaluacion en linea para reforzar todos los conocimientos adquiridos.
 
 [⬅️ Volver al README principal](../README.md)
