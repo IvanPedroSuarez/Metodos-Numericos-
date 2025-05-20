@@ -76,7 +76,7 @@ La interpolación polinómica de Lagrange construye un polinomio que pasa exacta
 **Ejercicio resuelto:**  
 Aproximar el valor de \( f(x) = x^2 \) en \( x = 3 \) usando los puntos \( (1, 1), (2, 4), (4, 16) \).
 
-[🔗 Ver código de interpolación polinómica (Python)](./codigo/interpolacion_polinomica.py)
+[🔗 Ver código de interpolación polinómica (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema5/Interpolacion%20Polinomica%20(Lagrange).py)
 
 ---
 
