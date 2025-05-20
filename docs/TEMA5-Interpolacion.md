@@ -27,29 +27,26 @@ En estos escenarios, los **métodos de interpolación y ajuste de funciones** se
 
 ## 🎓 Actividades de Aprendizaje
 
-### 📊 T2-E1: Exposición de Métodos Numéricos
+## 📊 T5-E1: Slider-Expo
 
 **Indicaciones del docente**  
-Conformarse en equipo e investigar los diferentes métodos de solución para una ecuación ( bisección , regla falta, interpolación, secante , etc), y entregar un reporte o tabla comparativa.
+Conformarse en equipos e investigar los principales métodos de interpolación existentes, para luego realizar una exposición.
 
-El metodo asignado fue el de la secante (actividad realizada en equipo), donde se abaracaron los siguientes puntos 
+En esta actividad, cada equipo investigó a fondo los métodos de interpolación más relevantes, explorando sus fundamentos teóricos, aplicaciones prácticas y limitaciones. El objetivo fue comprender cómo cada método aproxima funciones desconocidas a partir de un conjunto discreto de datos, y cómo elegir el método más adecuado según las características del problema.
 
+Los puntos clave abordados en la investigación y exposición fueron:
 
-- Introducción del metodo
-- ¿Qué es?
-- Fórmula
-- Pasos para aplicar el método
-- Requisitos para aplicar el método
-- Ejemplo (video)
-- Aplicaciones
-- Ventajas y Desventajas
-- Errores
-- Tabla comparativa
-- Desafío
-- Conclusión General.
+- Introducción a la interpolación: ¿Qué es y por qué es útil?
+- Métodos de interpolación que se fue asignadi:
+    
+    - Polinómica (Lagrange, Newton)
+  
+- Comparación del método: ventajas, desventajas y criterios de selección.
+- Ejemplos de aplicación en diferentes campos (ingeniería, ciencia de datos, etc.).
+- Pseudocigo y codigo.
+- Conclusión general sobre la importancia de la interpolación.
 
-[🔗 Ver presentacion sobre el metodo de la secante (Canva)](https://www.canva.com/design/DAGe18Zxr5k/NBIKlX_VZRux4u_mbS9y4A/edit?utm_content=DAGe18Zxr5k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
+Exposicion realizada en clase.
 ---
 
 
