@@ -121,11 +121,13 @@ y estimar el valor para \( x = 6 \).
 
 [🔗 Ver código de mínimos cuadrados (Python)](./codigo/minimos_cuadrados.py)
 
----
+
 
 Cada ejercicio incluye el análisis del procedimiento, la interpretación de resultados y la discusión de posibles dificultades o casos especiales.
 
 ---
+
+
 
 
 [⬅️ Volver al README principal](../README.md)
