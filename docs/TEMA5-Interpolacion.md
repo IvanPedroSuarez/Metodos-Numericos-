@@ -90,7 +90,7 @@ Ajustar una recta a los datos de temperatura en función de la hora:
 Horas: [8, 12, 14, 16]  
 Temperaturas: [15, 22, 25, 24]
 
-[🔗 Ver código de regresión lineal (Python)](./codigo/regresion_lineal.py)
+[🔗 Ver código de regresión lineal (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema5/Regresión%20Lineal.py)
 
 ---
 
@@ -104,7 +104,7 @@ Calcular el coeficiente de correlación para los datos:
 x: [1, 2, 3, 4, 5]  
 y: [2, 4, 6, 8, 10]
 
-[🔗 Ver código de correlación (Python)](./codigo/correlacion.py)
+[🔗 Ver código de correlación (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema5/Correlación.py)
 
 ---
 
@@ -119,7 +119,7 @@ x: [1, 2, 3, 4, 5]
 y: [2.1, 3.9, 6.2, 7.8, 10.3]  
 y estimar el valor para \( x = 6 \).
 
-[🔗 Ver código de mínimos cuadrados (Python)](./codigo/minimos_cuadrados.py)
+[🔗 Ver código de mínimos cuadrados (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema5/Mínimos%20Cuadrados.py)
 
 
 
