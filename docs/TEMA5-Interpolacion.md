@@ -127,6 +127,14 @@ Cada ejercicio incluye el análisis del procedimiento, la interpretación de res
 
 ---
 
+### 🚀 T5 - E3  -  Programa 
+
+**Descripción:**  
+Para la evaluación del tema el docente planteo un problema que debia ser resuelto a travez del meotodo de iterpolacion polinomica, no sin antes poder
+explicar la teoria del metodo. Posterioirmente el planteamiento, pseudocigo, codigo y resolucion del problema fueron plasmados en un documento .docs.
+[🔗 Ver documento de la evaluacion en formato .docs, ](https://docs.google.com/document/d/1dbSx0OTLwGttwcV7lvidtpZdW-mco7OTFTi_u1A4z-U/edit?usp=sharing)
+
+
 
 
 
