@@ -64,7 +64,7 @@ La interpolación lineal estima el valor de una función entre dos puntos conoci
 **Ejercicio resuelto:**  
 Aproximar el valor de \( f(x) = \sqrt{x} \) en \( x = 6 \) usando los puntos conocidos \( (1, 1.0), (4, 2.0), (9, 3.0) \).
 
-[🔗 Ver código de interpolación lineal (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema5/Interpolacion%Lineal.py)
+[🔗 Ver código de interpolación lineal (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/Interpolacion%20Lineal.py)
 
 ---
 
