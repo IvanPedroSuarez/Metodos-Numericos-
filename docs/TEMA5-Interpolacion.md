@@ -1,28 +1,29 @@
-# Tema 2: Métodos de Solución de Ecuaciones No Lineales
+# Tema 5: Interpolación y ajuste de funciones
 
 ## 🌍 Contexto Fundamental
 
-En el mundo real, los problemas científicos y de ingeniería rara vez se presentan en formas simples o con soluciones exactas. Muchas veces, nos enfrentamos a **ecuaciones no lineales** que no pueden resolverse de manera directa mediante técnicas algebraicas tradicionales. Por ejemplo:
+En la ciencia, la ingeniería y el análisis de datos, muchas veces solo disponemos de un conjunto limitado de mediciones o resultados experimentales. Sin embargo, necesitamos estimar valores intermedios, predecir comportamientos o modelar tendencias a partir de esos datos discretos. Por ejemplo:
 
-- Calcular la trayectoria precisa de un satélite 🛰️, donde la resistencia del aire y la gravedad varían con la altitud.
-- Determinar los puntos de equilibrio en reacciones químicas ⚗️, donde las ecuaciones de estado son altamente no lineales.
-- Optimizar el rendimiento de sistemas energéticos 🔋, donde intervienen múltiples variables interdependientes.
+- Estimar la concentración de un reactivo en un punto no medido de una reacción química ⚗️.
+- Predecir la temperatura en una ciudad a una hora no registrada 🌡️.
+- Ajustar una curva para modelar el crecimiento de una población o el rendimiento de un sistema energético 📈.
 
-En estos escenarios, los **métodos numéricos** se convierten en herramientas esenciales. Permiten aproximar soluciones con la precisión deseada, utilizando algoritmos iterativos que pueden implementarse fácilmente en una computadora. Así, los métodos numéricos actúan como el puente entre la teoría matemática y la resolución práctica de problemas complejos, abriendo la puerta a la simulación, el modelado y la optimización en la ciencia y la ingeniería moderna.
+En estos escenarios, los **métodos de interpolación y ajuste de funciones** se convierten en herramientas fundamentales. Permiten construir funciones que pasan exactamente por los puntos conocidos (interpolación) o que se aproximan lo mejor posible a los datos (ajuste), facilitando la simulación, la predicción y el análisis en contextos donde no existe una fórmula explícita.
 
 ---
 
-## 📌 Importancia de los Métodos de Solución
+## 📌 Importancia de la Interpolación y el Ajuste
 
-> "Son las herramientas que nos permiten encontrar respuestas donde las matemáticas tradicionales se quedan cortas."
+> "Son las técnicas que nos permiten estimar, predecir y modelar cuando los datos exactos no están disponibles o son insuficientes."
 
 **Aplicaciones principales:**
-- Encontrar raíces de ecuaciones no lineales.
-- Optimización de funciones complejas.
-- Resolución de sistemas de ecuaciones.
-- Análisis de convergencia y error.
+- Estimar valores intermedios entre datos experimentales.
+- Modelar tendencias y comportamientos en sistemas complejos.
+- Predecir resultados futuros a partir de datos históricos.
+- Analizar la precisión y el error de las aproximaciones.
 
 ---
+
 
 ## 🎓 Actividades de Aprendizaje
 
