@@ -37,7 +37,7 @@ En esta actividad, cada equipo investigó a fondo los métodos de interpolación
 Los puntos clave abordados en la investigación y exposición fueron:
 
 - Introducción a la interpolación: ¿Qué es y por qué es útil?
-- Métodos de interpolación que se fue asignadi:
+- Métodos de interpolación que se fue asignado:
     
     - Polinómica (Lagrange, Newton)
   
