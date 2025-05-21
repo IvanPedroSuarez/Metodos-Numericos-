@@ -77,35 +77,11 @@ Extiende el método de Gauss, eliminando también los elementos por encima de la
 **Ejercicio resuelto:**  
 Resolver el mismo sistema de 3x3 por Gauss-Jordan.
 
-[🔗 Ver código del método de Gauss-Jordan (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema3/Metodo%20de%20Gauss-Jordan.py)
+[🔗 Ver código del método de Gauss-Jordan (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema3/Metodo%20Gauss%20Jordan.py)
 
 ---
 
-#### 3. Método de la Matriz Inversa
-
-**Descripción:**  
-Si una matriz A es invertible, el sistema \( Ax = b \) se puede resolver mediante \( x = A^{-1}b \).
-
-**Ejercicio resuelto:**  
-Usar la matriz inversa para resolver un sistema lineal.
-
-[🔗 Ver código del método de la Matriz Inversa (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema3/Metodo%20de%20matriz%20inversa.py)
-
----
-
-#### 4. Método de Factorización LU
-
-**Descripción:**  
-Descompone la matriz A en el producto de una matriz triangular inferior (L) y una superior (U), simplificando la resolución de múltiples sistemas con la misma matriz A.
-
-**Ejercicio resuelto:**  
-Aplicar la factorización LU para resolver un sistema.
-
-[🔗 Ver código del método LU (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema3/Metodo%20LU.py)
-
----
-
-#### 5. Método de Jacobi
+#### 3. Método de Jacobi
 
 **Descripción:**  
 Es un método iterativo que calcula nuevas aproximaciones de cada variable usando los valores de la iteración anterior. Requiere matrices diagonales dominantes.
@@ -113,11 +89,11 @@ Es un método iterativo que calcula nuevas aproximaciones de cada variable usand
 **Ejercicio resuelto:**  
 Resolver un sistema iterativamente con Jacobi.
 
-[🔗 Ver código del método de Jacobi (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema3/Metodo%20Jacobi.py)
+[🔗 Ver código del método de Jacobi (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema3/Metodo%20de%20Jacobi.py)
 
 ---
 
-#### 6. Método de Gauss-Seidel
+#### 4. Método de Gauss-Seidel
 
 **Descripción:**  
 Similar al de Jacobi, pero utiliza inmediatamente los nuevos valores calculados en cada iteración, lo cual acelera la convergencia en muchos casos.
@@ -125,7 +101,7 @@ Similar al de Jacobi, pero utiliza inmediatamente los nuevos valores calculados 
 **Ejercicio resuelto:**  
 Aplicar Gauss-Seidel a un sistema de 3x3.
 
-[🔗 Ver código del método de Gauss-Seidel (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema3/Metodo%20Gauss-Seidel.py)
+[🔗 Ver código del método de Gauss-Seidel (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema3/Metodo%20de%20Gauss-Seidel.py)
 
 ---
 
