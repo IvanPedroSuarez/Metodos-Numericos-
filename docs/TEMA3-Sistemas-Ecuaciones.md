@@ -26,27 +26,24 @@ Dado que resolver estos sistemas de forma manual no es práctico cuando el núme
 
 ## 🎓 Actividades de Aprendizaje
 
-### 📊 T3-E1: Exposición de Métodos Numéricos
+### 🧠 T3-E1: Mapa Mental de Métodos Numéricos
 
 **Indicaciones del docente**  
-Formarse en equipos e investigar los diferentes métodos de solución para sistemas de ecuaciones lineales (Gauss, Gauss-Jordan, matrices inversas, factorización LU, Jacobi, Gauss-Seidel, etc). Elaborar un informe o presentación.
+Realizar un mapa mental que resuma y compare los principales métodos para resolver sistemas de ecuaciones lineales:
 
-El método asignado fue **Gauss-Seidel**, y se abordaron los siguientes puntos:
+- Eliminación Gaussiana  
+- Gauss-Jordan  
+- Método de Jacobi  
+- Método de Gauss-Seidel
 
-- Introducción del método  
-- ¿Qué es?  
-- Fórmula  
-- Pasos para aplicar el método  
-- Requisitos para aplicar el método  
-- Ejemplo (video)  
-- Aplicaciones  
-- Ventajas y Desventajas  
-- Convergencia y errores  
-- Tabla comparativa  
-- Desafío  
-- Conclusión general
+**Contenido del mapa mental:**
+- Concepto de cada método
+- Requisitos para su aplicación (por ejemplo: diagonal dominante, matriz cuadrada, etc.)
+- Ventajas y desventajas
+- Tipos de sistemas que pueden resolver
+- Comparativa visual de los métodos iterativos vs directos
 
-[🔗 Ver presentación sobre el método de Gauss-Seidel (Canva)](https://www.canva.com/)
+[🔗 Ver presentación sobre el Mapa Mental (Lucida)](https://lucid.app/lucidspark/06170dd7-87af-417c-a10a-c7c702da8f67/edit?viewport_loc=-20381%2C16382%2C21347%2C10146%2C0_0&invitationId=inv_fae549c6-18d6-451b-b564-cb42654dd187)
 
 ---
 
@@ -115,7 +112,7 @@ Cada ejercicio incluye el análisis del procedimiento, la interpretación de res
 **Descripción:**  
 El proyecto final consiste en resolver un sistema de ecuaciones lineales utilizando **Excel**, aplicando paso a paso el método de **Gauss-Jordan** con fórmulas y referencias.  
 
-[🔗 Ver documento de la evaluación en formato .xlsx](https://docs.google.com/spreadsheets/)
+[🔗 Ver documento de la evaluación](https://docs.google.com/document/d/1KVxzQzMgrfOevVSGcP5M272uYC6VKLRiAVBtBGRaipY/edit?usp=sharing)
 
 ---
 
