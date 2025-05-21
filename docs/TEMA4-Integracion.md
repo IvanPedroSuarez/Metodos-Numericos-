@@ -71,7 +71,7 @@ Este método utiliza parábolas para aproximar el área bajo la curva. Es muy pr
 **Ejercicio resuelto:**  
 Calcular la integral de \( f(x) = e^{-x^2} \) en \([0, 1]\).
 
-[🔗 Ver código de Simpson 1/3 (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/integracion/simpson_1_3.py)
+[🔗 Ver código de Simpson 1/3 (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/Metodo%20de%20Simpson%20un%20tercio.py)
 
 ---
 
@@ -83,7 +83,7 @@ Simpson 3/8 es una variante que utiliza polinomios cúbicos. Es útil cuando el 
 **Ejercicio resuelto:**  
 Aproximar la integral de \( f(x) = \sqrt{1 + x^4} \) en \([0, 3]\).
 
-[🔗 Ver código de Simpson 3/8 (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/integracion/simpson_3_8.py)
+[🔗 Ver código de Simpson 3/8 (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/Metodo%20Simpson%20tres%20octavos.py)
 
 ---
 
@@ -95,13 +95,13 @@ Este método transforma la integral definida a una forma estándar y utiliza pun
 **Ejercicio resuelto:**  
 Evaluar la integral de \( f(x) = \frac{1}{1 + x^2} \) en \([-1, 1]\) usando 2 y 3 puntos.
 
-[🔗 Ver código de Cuadratura Gaussiana (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/integracion/cuadratura_gaussiana.py)
+[🔗 Ver código de Cuadratura Gaussiana (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/Cuadratura%20Gaussiana.py)
 
 ---
 
 Cada implementación incluye gráficos comparativos, análisis de errores y recomendaciones de uso según la función o intervalo.
 
-[🔗 Ver carpeta completa de integración numérica](https://github.com/IvanPedroSuarez/Metodos-Numericos-/tree/master/codigos/tema4/integracion)
+[🔗 Ver carpeta completa de integración numérica](https://github.com/IvanPedroSuarez/Metodos-Numericos-/tree/master/codigos/tema4)
 
 
 ### 🚀 T4-E3: Proyecto Final
@@ -114,7 +114,7 @@ Aplicación de los métodos estudiados a un caso real o simulado. El proyecto in
 - Visualización gráfica de la función, derivadas e integrales.
 - Comparación de precisión entre métodos.
 
-[🔗 Ver notebook del proyecto (Jupyter Notebook)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/tree/master/codigos/tema4/proyecto_final)
+[🔗 Ver Activida programa)](https://drive.google.com/file/d/1QOe_dXpsbuMl1Po8cSFskxNFZt0xZm8O/view?usp=sharing)
 
 ---
 
