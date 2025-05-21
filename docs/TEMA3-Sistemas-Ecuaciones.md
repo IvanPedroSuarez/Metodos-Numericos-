@@ -65,7 +65,7 @@ El método de eliminación de Gauss transforma el sistema original en uno triang
 **Ejercicio resuelto:**  
 Resolver un sistema de 3x3 ecuaciones con coeficientes conocidos.
 
-[🔗 Ver código del método de Gauss (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema3/Eliminacio%20nGaussiana%20con%20pivote.py)
+[🔗 Ver código del método de Gauss (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema3/Eliminacio20%nGaussiana20%con20%pivote.py)
 
 ---
 
