@@ -59,7 +59,7 @@ Este método aproxima el área bajo la curva dividiendo el intervalo en segmento
 **Ejercicio resuelto:**  
 Estimar el valor de la integral definida de \( f(x) = \ln(x) \) en el intervalo \([1, 2]\).
 
-[🔗 Ver código del método del trapecio (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/integracion/metodo_trapecio.py)
+[🔗 Ver código del método del trapecio (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/metodo%20del%20trapecio.py)
 
 ---
 
