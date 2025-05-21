@@ -57,7 +57,7 @@ Ejercicios prácticos enfocados en la aplicación de métodos numéricos para re
 
 ---
 
-#### 1. Método de Gauss
+#### 1. Método de Eliminacion Gaussiana
 
 **Descripción:**  
 El método de eliminación de Gauss transforma el sistema original en uno triangular superior mediante operaciones fila, para luego resolver por sustitución hacia atrás.
@@ -65,7 +65,7 @@ El método de eliminación de Gauss transforma el sistema original en uno triang
 **Ejercicio resuelto:**  
 Resolver un sistema de 3x3 ecuaciones con coeficientes conocidos.
 
-[🔗 Ver código del método de Gauss (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema3/Metodo%20de%20Gauss.py)
+[🔗 Ver código del método de Gauss (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema3/Eliminacion Gaussiana con pivote.py)
 
 ---
 
