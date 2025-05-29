@@ -155,7 +155,7 @@ x_{n+1} = x_n - f(x_n)/f'(x_n)
 
 para el valor específico de x0 = 0.0 con la función f(x) = x^(1/3)
 
-[🔗 Ver caso de prueba](https://github.com/tu_usuario/tu_repo/blob/main/newton_raphson_error.py)
+[🔗 Ver caso de prueba ](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema2/CasoPrueba.py)
 
 ¿Por qué falla?
 La función falla porque al evaluar en x0 = 0.0, la derivada f'(x) = (1/3)x^(-2/3) no está definida (tiende a infinito).
