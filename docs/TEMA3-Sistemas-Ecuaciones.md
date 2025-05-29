@@ -107,23 +107,17 @@ Cada ejercicio incluye el análisis del procedimiento, la interpretación de res
 
 ---
 
-## Caso de prueba: Ejemplo: Limitación por valores no definidos (NaN o infinito)
-
-Supón que el usuario ingresa la función:
-
-funcion_str = "1/x"
-a = -1
-b = 1
-n = 4
-Aquí, la función 1/x no está definida en x = 0 (hay una discontinuidad), y Python (NumPy) devolverá un error o un valor inf o nan al evaluar en ese punto.
+## Caso de prueba: Ejemplo: Cuando el pivote de una columna es 0 Gauss-Jordan 
+Resolver el siguiente sistema de ecuaciones lineales utilizando el método de eliminación Gauss-Jordan con pivoteo parcial. El usuario ingresa la matriz aumentada correspondiente y el programa muestra paso a paso el proceso hasta encontrar la solución:
+                                                            x−2y=1
+                                                            2x−4y=3
+​
 
 [🔗 Ver caso de prueba ](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/CasoPrueba.py)
 
 ¿Por qué falla?
-¿Por qué ocurre este error?
-Porque Python (y NumPy) no pueden calcular el valor de 1/x en x = 0, lo que genera un valor indefinido (inf o nan).
-Este tipo de error no es de sintaxis, sino una limitación del cálculo numérico y del manejo de discontinuidades en Python.
-
+El método falla cuando, durante el proceso, el pivote de una columna es cero y no hay ninguna fila disponible para intercambiar que tenga un valor distinto de cero en esa columna. Esto significa que el sistema no tiene solución única: puede ser inconsistente (como en este ejemplo, donde las ecuaciones son proporcionales pero los términos independientes no coinciden) o tener infinitas soluciones.
+En este caso, la segunda fila se transforma en [0, 0, 1], lo que representa una ecuación imposible (0 = 1), por lo que el algoritmo detecta la inconsistencia y lanza un error para evitar cálculos inválidos.
 ---
 
 ### 🚀 T3 -- E3 --- Proyecto
