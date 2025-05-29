@@ -123,7 +123,7 @@ Aquí, la función 1/x no está definida en x = 0 (hay una discontinuidad), y Py
 Porque Python (y NumPy) no pueden calcular el valor de 1/x en x = 0, lo que genera un valor indefinido (inf o nan).
 Este tipo de error no es de sintaxis, sino una limitación del cálculo numérico y del manejo de discontinuidades en Python.
 
-
+---
 
 ### 🚀 T4-E3: Proyecto Final
 
