@@ -160,8 +160,7 @@ El tiempo característico del circuito es
 
 τ=RC=0.1s, pero el paso elegido es 
 
-h=1s, ¡diez veces mayor! 
-El método de Euler, al usar un paso tan grande, no captura la rápida caída exponencial del voltaje y en vez de acercarse a cero, la solución alterna entre valores positivos y negativos cada vez más grandes (inestabilidad numérica).
+h=1s, ¡diez veces mayor!. El método de Euler, al usar un paso tan grande, no captura la rápida caída exponencial del voltaje y en vez de acercarse a cero, la solución alterna entre valores positivos y negativos cada vez más grandes (inestabilidad numérica).
 En la práctica, para sistemas con cambios rápidos, el paso debe ser mucho menor que la constante de tiempo del sistema. Si no, el método puede divergir y dar resultados absurdos, como en este ejemplo.
 
 
