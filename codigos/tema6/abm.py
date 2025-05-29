@@ -1,31 +1,34 @@
-import numpy as np
+iimport numpy as np
 
-m, c, k = 60, 300, 2e4
-def f(t, Y):
-    x, v = Y
-    return np.array([v, -(c/m)*v - (k/m)*x])
+# Parámetros del circuito RC
+Vin = 5.0        # Voltaje de entrada (V)
+R = 1e3          # Resistencia (ohms)
+C = 100e-6       # Capacitancia (faradios)
 
-h = 0.01
-N = int(3/h)
-t = np.zeros(N+1)
-Y = np.zeros((N+1,2))
-Y[0]= [0.05, 0.0]
+# Definición de la función diferencial: dV/dt = (Vin - V)/(R*C)
+f = lambda t, V: (Vin - V)/(R*C)
 
-for i in range(3):
-    k1 = h*f(t[i], Y[i])
-    k2 = h*f(t[i]+h/2, Y[i]+k1/2)
-    k3 = h*f(t[i]+h/2, Y[i]+k2/2)
-    k4 = h*f(t[i]+h,   Y[i]+k3)
-    Y[i+1] = Y[i] + (k1 + 2*k2 + 2*k3 + k4)/6
-    t[i+1] = t[i] + h
+h = 0.02         # Paso de tiempo (s)
+t0 = 0.0         # Tiempo inicial (s)
+V0 = 0.0         # Voltaje inicial en el capacitor (V)
+pasos = int(0.2/h)  # Número de pasos para 0.2 segundos
 
-for i in range(3, N):
-    t[i+1] = t[i] + h
-    Yp = Y[i] + h/24*(55*f(t[i],Y[i]) - 59*f(t[i-1],Y[i-1]) +37*f(t[i-2],Y[i-2]) - 9*f(t[i-3],Y[i-3]))
-    Y[i+1] = Y[i] + h/24*( 9*f(t[i+1],Yp) +19*f(t[i],Y[i]) -5*f(t[i-1],Y[i-1]) +  f(t[i-2],Y[i-2]))
+def euler(f, t0, y0, h, n):
+    t = [t0]
+    y = [y0]
+    for _ in range(n):
+        # Método de Euler: y_{n+1} = y_n + h*f(t_n, y_n)
+        y.append(y[-1] + h * f(t[-1], y[-1]))
+        t.append(t[-1] + h)
+    return np.array(t), np.array(y)
 
-for j in range(0,N+1,int(0.3/h)):
-    print(f"t={t[j]:.1f} s  x={Y[j,0]:+.4f} m  v={Y[j,1]:+.4f} m/s")
+t, V = euler(f, t0, V0, h, pasos)
+
+# Imprimir resultados
+for ti, Vi in zip(t, V):
+    print(f"t={ti:4.2f} s  -->  V={Vi:5.3f} V")
+
+
 
 Output (fragmento):
 t=0.0 s  x=+0.0500 m  v=+0.0000 m/s
