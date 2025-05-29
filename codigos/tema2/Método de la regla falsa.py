@@ -69,7 +69,7 @@ print("-" * 80)
 print(f"La raíz encontrada es: {raiz:.6f}")
 
 
-#Ejecucuion del programa:
+Output
 
 Método de la Regla Falsa para f(x) = x³ - x - 1
 --------------------------------------------------------------------------------
