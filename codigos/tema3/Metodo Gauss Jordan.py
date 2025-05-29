@@ -77,3 +77,56 @@ if __name__ == "__main__":
         print("\nSoluciones del sistema:", soluciones)
     except ValueError as e:
         print(f"\nError: {e}")
+
+
+
+
+output:
+
+=== ELIMINACIÓN GAUSS-JORDAN CON PIVOTEO PARCIAL ===
+Ingrese el número de ecuaciones (y variables): 3
+Ingrese los coeficientes del sistema, incluyendo los términos independientes:
+Ingrese el valor para la posición [0][0]: 2
+Ingrese el valor para la posición [0][1]: 1
+Ingrese el valor para la posición [0][2]: -1
+Ingrese el valor para la posición [0][3]: 8
+Ingrese el valor para la posición [1][0]: -3
+Ingrese el valor para la posición [1][1]: -1
+Ingrese el valor para la posición [1][2]: 2
+Ingrese el valor para la posición [1][3]: -11
+Ingrese el valor para la posición [2][0]: -2
+Ingrese el valor para la posición [2][1]: 1
+Ingrese el valor para la posición [2][2]: 2
+Ingrese el valor para la posición [2][3]: -3
+
+Matriz ingresada:
+2.00 1.00 -1.00 8.00
+-3.00 -1.00 2.00 -11.00
+-2.00 1.00 2.00 -3.00
+
+
+Intercambio de fila 0 con fila 1:
+-3.00 -1.00 2.00 -11.00
+2.00 1.00 -1.00 8.00
+-2.00 1.00 2.00 -3.00
+
+
+Paso 1 (Eliminación completa para variable x_0):
+1.00 0.33 -0.67 3.67
+0.00 1.67 0.33 15.33
+0.00 1.67 0.67 4.33
+
+
+Paso 2 (Eliminación completa para variable x_1):
+1.00 0.00 -0.80 -1.80
+0.00 1.00 0.20 9.20
+0.00 0.00 0.33 -11.00
+
+
+Paso 3 (Eliminación completa para variable x_2):
+1.00 0.00 0.00 2.00
+0.00 1.00 0.00 -1.00
+0.00 0.00 1.00 -33.00
+
+
+Soluciones del sistema: [  2.  -1. -33.]
