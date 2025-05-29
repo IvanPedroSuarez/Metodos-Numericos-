@@ -142,7 +142,7 @@ La función falla porque tiene puntos duplicados consecutivos en X (x[0] = x[1] 
 En la fórmula de interpolación lineal, el denominador (x1 - x0) se vuelve cero, causando una división por cero que Python no puede resolver.
 Python lanza ZeroDivisionError cuando detecta división por cero, deteniendo completamente la ejecución del programa.
 
-
+---
 
 ### 🚀 T5 - E3  -  Programa 
 
