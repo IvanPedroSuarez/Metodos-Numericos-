@@ -2,45 +2,54 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def integral_trapecio_interactivo():
-    """
-    Calculadora de integrales definidas usando el método del trapecio.
-    Corrige evaluación de funciones y visualiza resultado.
-    """
+    # Imprime el título y las instrucciones para el usuario
     print("=== Calculadora de Integrales por Método del Trapecio ===")
     print("\nInstrucciones:")
     print("1. Ingrese la función a integrar usando x como variable")
     print("2. Use funciones matemáticas como sin(), cos(), exp(), etc.")
     print("3. Ejemplos válidos: 'x**2', 'sin(x)*cos(x)', 'exp(-x**2)'")
-    
+
+    # Solicita al usuario la función, los límites y el número de subintervalos
     funcion_str = input("\nIngrese la función a integrar (en términos de x): ")
     a = float(input("Ingrese el límite inferior de integración (a): "))
     b = float(input("Ingrese el límite superior de integración (b): "))
     n = int(input("Ingrese el número de subintervalos (n > 0): "))
-    
+
+    # Verifica que el número de subintervalos sea válido
     if n <= 0:
         print("\nError: El número de subintervalos debe ser positivo")
         return
-    
+
+    # Define la función a integrar usando eval en un entorno seguro
     def f(x):
         return eval(funcion_str, {"__builtins__": None}, {
             "x": x, "sin": np.sin, "cos": np.cos, "tan": np.tan,
             "exp": np.exp, "log": np.log, "sqrt": np.sqrt, "pi": np.pi, "np": np
         })
-    
+
     try:
+        # Calcula el ancho de cada subintervalo
         h = (b - a) / n
+        # Genera los puntos x y evalúa la función en esos puntos
         x_points = np.linspace(a, b, n + 1)
         y_points = f(x_points)
-        
+
+        # Verifica si hay valores no definidos (NaN o infinito) en la evaluación
+        if np.any(np.isnan(y_points)) or np.any(np.isinf(y_points)):
+            raise ValueError("La función no está definida en todo el intervalo de integración.")
+
+        # Calcula la integral usando el método del trapecio
         integral = h * (0.5 * y_points[0] + 0.5 * y_points[-1] + np.sum(y_points[1:-1]))
-        
+
+        # Muestra los resultados principales
         print("\n=== Resultados ===")
         print(f"Función integrada: f(x) = {funcion_str}")
         print(f"Límites de integración: [{a}, {b}]")
         print(f"Número de subintervalos: {n}")
         print(f"Ancho de cada subintervalo (h): {h:.6f}")
         print(f"\nValor aproximado de la integral: {integral:.10f}")
-        
+
+        # Si n es pequeño, muestra el detalle de cada trapecio
         if n <= 10:
             print("\nDetalles del cálculo:")
             print(f"{'Intervalo':<10} {'x_i':<15} {'f(x_i)':<15} {'Área':<15}")
@@ -49,17 +58,24 @@ def integral_trapecio_interactivo():
                 area = h * (y_points[i] + y_points[i + 1]) / 2
                 print(f"{i}-{i + 1:<7} {x_points[i]:<15.6f} {y_points[i]:<15.6f} {area:<15.6f}")
             print("\nSuma de áreas de todos los trapecios:", integral)
-        
+
+        # Llama a la función para graficar los trapecios
         graficar_trapecios(f, x_points, y_points, a, b)
-    
+
     except Exception as e:
-        print(f"\nError al calcular la integral: {str(e)}")
-        print("Revisa que la función esté bien escrita y sea válida.")
+        # Captura cualquier error y muestra un mensaje explicativo
+        print("\n=== Error de evaluación ===")
+        print(f"Error al calcular la integral: {str(e)}")
+        print("Esto puede deberse a que la función no está definida en todo el intervalo,")
+        print("por ejemplo, divisiones por cero, raíces negativas, o valores infinitos.")
+        print("Estas son limitaciones del manejo numérico en Python.")
 
 def graficar_trapecios(f, x_points, y_points, a, b):
+    # Genera puntos para graficar la curva de la función
     x_curve = np.linspace(a, b, 1000)
     y_curve = f(x_curve)
-    
+
+    # Crea la figura y grafica la función y los trapecios
     plt.figure(figsize=(10, 6))
     plt.plot(x_curve, y_curve, 'b-', linewidth=2, label='Función')
     for i in range(len(x_points) - 1):
@@ -79,7 +95,7 @@ def graficar_trapecios(f, x_points, y_points, a, b):
 if __name__ == "__main__":
     integral_trapecio_interactivo()
 
-# --- Output simulado con una función válida y n pequeño ---
+# --- Output 
 
 
 === Calculadora de Integrales por Método del Trapecio ===
@@ -89,29 +105,16 @@ Instrucciones:
 2. Use funciones matemáticas como sin(), cos(), exp(), etc.
 3. Ejemplos válidos: 'x**2', 'sin(x)*cos(x)', 'exp(-x**2)'
 
-Ingrese la función a integrar (en términos de x): x**2
-Ingrese el límite inferior de integración (a): 0
+Ingrese la función a integrar (en términos de x): 1/x
+Ingrese el límite inferior de integración (a): -1
 Ingrese el límite superior de integración (b): 1
 Ingrese el número de subintervalos (n > 0): 4
 
-=== Resultados ===
-Función integrada: f(x) = x**2
-Límites de integración: [0.0, 1.0]
-Número de subintervalos: 4
-Ancho de cada subintervalo (h): 0.250000
-
-Valor aproximado de la integral: 0.3281250000
-
-Detalles del cálculo:
-Intervalo   x_i             f(x_i)          Área           
--------------------------------------------------------
-0-1        0.000000        0.000000        0.015625       
-1-2        0.250000        0.062500        0.070312       
-2-3        0.500000        0.250000        0.164062       
-3-4        0.750000        0.562500        0.328125       
-
-Suma de áreas de todos los trapecios: 0.328125
-
+=== Error de evaluación ===
+Error al calcular la integral: La función no está definida en todo el intervalo de integración.
+Esto puede deberse a que la función no está definida en todo el intervalo,
+por ejemplo, divisiones por cero, raíces negativas, o valores infinitos.
+Estas son limitaciones del manejo numérico en Python.
 
 # --- Explicación de cuándo falla ---
 
