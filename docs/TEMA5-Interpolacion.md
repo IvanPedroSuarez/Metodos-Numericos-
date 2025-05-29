@@ -135,7 +135,7 @@ f(x) = y0 + (x−x0) * (y1−y0/x1-x0)
 
 para el valor específico de x  =2.0
 
-[🔗 Ver caso de prueba ](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema6/casoprueba.py)
+[🔗 Ver caso de prueba ](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema5/casoprueba.py)
 
 ¿Por qué falla?
 La función falla porque tiene puntos duplicados consecutivos en X (x[0] = x[1] = 2.0) y el valor a interpolar (x_buscado = 2.0) coincide exactamente con esos puntos.
