@@ -30,6 +30,12 @@ En estos escenarios, los **métodos numéricos para ecuaciones diferenciales** s
 link para ver la presentacion (https://www.canva.com/design/DAGn5cuHz-w/0U6xB8mzlZnP43LQbO_TZA/edit?utm_content=DAGn5cuHz-w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton.)
 
 ---
+
+## 💻 T6-E2: Problemario de Métodos Numéricos para Ecuaciones Diferenciales
+
+Ejercicios prácticos enfocados en la aplicación de métodos numéricos para la resolución de ecuaciones diferenciales ordinarias y sistemas, con aplicaciones reales en ingeniería, física y biología. Cada subapartado describe brevemente el método utilizado y presenta un ejercicio representativo, resuelto con Python y acompañado de interpretación.
+
+
 ## 1. Método de Euler
 **Descripción del método:**
 El método de Euler es una técnica numérica simple y directa para aproximar soluciones de ecuaciones diferenciales ordinarias de primer orden. Consiste en avanzar paso a paso usando la pendiente local, lo que lo hace fácil de implementar pero con precisión limitada para pasos grandes.
