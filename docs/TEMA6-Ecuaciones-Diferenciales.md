@@ -137,6 +137,9 @@ En medicina y farmacología, es fundamental conocer cómo varía la concentraci�
 
 ### 🚀 T5 - E3  -  Programa 
 
+**Descripción del método:**
+El método de Adams-Moulton de 4 pasos es un método implícito de pasos múltiples que utiliza información de los cuatro pasos anteriores para corregir la predicción de la solución, logrando alta precisión y estabilidad en problemas de decaimiento o crecimiento lento.
+
 **Descripción:**  
 Para la evaluación del tema el docente planteo un problema que debia ser resuelto a travez del metodo de iterpolacion polinomica, no sin antes poder
 explicar (con nuestras propias palabras) el algoritmo del metodo. Posterioirmente el planteamiento, pseudocodigo, codigo y resolucion del problema fueron plasmados en un documento.
