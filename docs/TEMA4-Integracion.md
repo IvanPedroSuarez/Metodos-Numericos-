@@ -116,7 +116,7 @@ b = 1
 n = 4
 Aquí, la función 1/x no está definida en x = 0 (hay una discontinuidad), y Python (NumPy) devolverá un error o un valor inf o nan al evaluar en ese punto.
 
-[🔗 Ver caso de prueba ](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/casoprueba.py)
+[🔗 Ver caso de prueba ](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/CasoPrueba.py)
 
 ¿Por qué falla?
 ¿Por qué ocurre este error?
