@@ -143,16 +143,10 @@ En medicina y farmacología, es fundamental conocer cómo varía la concentraci�
 
 
 ---
-Caso de prueba: Método de Euler con paso demasiado grande
-RouteLLM
-Routing to GPT-4.1
-¡Excelente idea! Aquí tienes un caso de prueba donde el método de Euler falla debido a un paso de integración demasiado grande (h), lo que provoca un resultado numéricamente inestable y completamente incorrecto.
+## Caso de prueba: Método de Euler con paso demasiado grande
 
-Caso de prueba: Método de Euler con paso demasiado grande
-Descripción:
 El método de Euler es sencillo, pero su precisión y estabilidad dependen fuertemente del tamaño del paso h. Si el paso es demasiado grande, el método puede divergir o dar resultados absurdos, especialmente en ecuaciones donde la solución cambia rápidamente.
 
-Ejemplo:
 Supón que queremos simular la descarga de un capacitor en un circuito RC con 
 𝑅=1kΩ,  𝐶=100𝜇F, y un voltaje inicial de 5V. Usaremos el método de Euler, pero con un paso de integración enorme: 
 
