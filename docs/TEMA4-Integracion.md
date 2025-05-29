@@ -106,7 +106,7 @@ Cada implementación incluye gráficos comparativos, análisis de errores y reco
 
 ---
 
-## Caso de prueba: Ejemplo: Limitación por valores no definidos (NaN o infinito)
+## Caso de prueba: Ejemplo: Limitación por valores no definidos (NaN o infinito) Metodo del trapecio.
 
 Supón que el usuario ingresa la función:
 
