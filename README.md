@@ -35,7 +35,7 @@ Los métodos numéricos permiten resolver problemas complejos que no tienen solu
 | 3 | Sistemas de ecuaciones lineales | [📘 Teoría](/docs/TEMA3-Sistemas-Ecuaciones.md) | [🐍 Python](/codigos/tema3) 
 | 4 | Diferenciación e integración numérica | [📘 Teoría](/docs/TEMA4-Integracion.md) | [🐍 Python](/codigos/tema4)
 | 5 | Interpolación y ajuste de datos | [📘 Teoría](/docs/TEMA5-Interpolacion.md) | [🐍 Python](/codigos/tema5) 
-| 6 | Ecuaciones diferenciales ordinarias | [📘 Teoría](/docs/TEMA6.md) | [🐍 Python](/codigos/tema6) 
+| 6 | Ecuaciones diferenciales ordinarias | [📘 Teoría](/docs/TEMA6-Ecuaciones-Diferenciales.md) | [🐍 Python](/codigos/tema6) 
 
 ---
 
