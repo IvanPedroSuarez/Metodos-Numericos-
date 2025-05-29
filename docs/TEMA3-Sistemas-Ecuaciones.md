@@ -109,8 +109,10 @@ Cada ejercicio incluye el análisis del procedimiento, la interpretación de res
 
 ## Caso de prueba: Ejemplo: Cuando el pivote de una columna es 0 Gauss-Jordan 
 Resolver el siguiente sistema de ecuaciones lineales utilizando el método de eliminación Gauss-Jordan con pivoteo parcial. El usuario ingresa la matriz aumentada correspondiente y el programa muestra paso a paso el proceso hasta encontrar la solución:
-                                                            x−2y=1
-                                                            2x−4y=3
+                                                            
+                                                            
+#x−2y=1
+#2x−4y=3
 ​
 
 [🔗 Ver caso de prueba ](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/CasoPrueba.py)
