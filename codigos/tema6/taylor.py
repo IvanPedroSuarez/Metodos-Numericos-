@@ -1,17 +1,23 @@
 import numpy as np
 
-k = 0.15
-Tamb = 22.0
-f = lambda t,T: -k*(T-Tamb)
-f1 = lambda t,T:  k**2*(T-Tamb)
+k = 0.15         # Coeficiente de enfriamiento (1/min)
+Tamb = 22.0      # Temperatura ambiente (°C)
 
-h, N = 1.0, 10
+# Definición de la función y su derivada
+f = lambda t,T: -k*(T-Tamb)         # Primera derivada
+f1 = lambda t,T:  k**2*(T-Tamb)     # Segunda derivada
+
+h = 1.0          # Paso de tiempo (min)
+N = 10           # Número de pasos (10 minutos)
 t = np.arange(0, N+1)*h
-T = np.zeros_like(t); T[0] = 90.0
+T = np.zeros_like(t)
+T[0] = 90.0      # Temperatura inicial (°C)
 
+# Método de Taylor de segundo orden
 for i in range(N):
     T[i+1] = T[i] + h*f(t[i],T[i]) + h**2/2 * f1(t[i],T[i])
 
+# Imprimir resultados
 for ti, Ti in zip(t, T):
     print(f"t={ti:2.0f} min  T={Ti:5.2f} °C")
 
