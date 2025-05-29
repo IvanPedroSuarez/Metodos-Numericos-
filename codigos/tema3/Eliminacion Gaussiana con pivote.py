@@ -80,3 +80,63 @@ if __name__ == "__main__":
     soluciones = gauss_pivoteo(A, b)
     print("\nSoluciones del sistema:", soluciones)
 
+
+
+output:
+
+=== ELIMINACIÓN GAUSSIANA CON PIVOTEO PARCIAL ===
+Ingrese el numero de ecuaciones (y variables): 3
+Ingrese los coeficientes del sistema: 
+Ingrese el valor para la posicion [0][0]: 2
+Ingrese el valor para la posicion [0][1]: 1
+Ingrese el valor para la posicion [0][2]: -1
+Ingrese el valor para la posicion [1][0]: -3
+Ingrese el valor para la posicion [1][1]: -1
+Ingrese el valor para la posicion [1][2]: 2
+Ingrese el valor para la posicion [2][0]: -2
+Ingrese el valor para la posicion [2][1]: 1
+Ingrese el valor para la posicion [2][2]: 2
+Ingrese los terminos independientes: 
+Ingrese el valor del termino independiente en la fila 0: 8
+Ingrese el valor del termino independiente en la fila 1: -11
+Ingrese el valor del termino independiente en la fila 2: -3
+
+Matriz ingresada:
+Matriz de coeficientes:
+2.00 1.00 -1.00
+-3.00 -1.00 2.00
+-2.00 1.00 2.00
+
+Matriz aumentada inicial:
+Matriz Aumentada:
+2.00 1.00 -1.00 8.00
+-3.00 -1.00 2.00 -11.00
+-2.00 1.00 2.00 -3.00
+
+Intercambio de fila 0 con fila 1
+Matriz después del intercambio:
+Matriz Aumentada:
+-3.00 -1.00 2.00 -11.00
+2.00 1.00 -1.00 8.00
+-2.00 1.00 2.00 -3.00
+
+Matriz después de la eliminación en la columna 0:
+Matriz Aumentada:
+1.00 0.33 -0.67 3.67
+0.00 1.67 0.33 15.33
+0.00 1.67 0.67 4.33
+
+Matriz después de la eliminación en la columna 1:
+Matriz Aumentada:
+1.00 0.33 -0.67 3.67
+0.00 1.00 0.20 9.18
+0.00 0.00 0.33 -11.00
+
+Matriz después de la eliminación en la columna 2:
+Matriz Aumentada:
+1.00 0.33 0.00 -18.33
+0.00 1.00 0.00 15.00
+0.00 0.00 1.00 -33.00
+
+Soluciones del sistema: [ 2. -1. -3.]
+
