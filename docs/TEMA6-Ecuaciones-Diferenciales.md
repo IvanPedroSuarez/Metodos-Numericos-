@@ -141,6 +141,35 @@ En medicina y farmacología, es fundamental conocer cómo varía la concentraci�
 
 [🔗 Ver código de Adams-Moulton 4 pasos (Python)](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema6/am4.py)
 
+
+---
+Caso de prueba: Método de Euler con paso demasiado grande
+RouteLLM
+Routing to GPT-4.1
+¡Excelente idea! Aquí tienes un caso de prueba donde el método de Euler falla debido a un paso de integración demasiado grande (h), lo que provoca un resultado numéricamente inestable y completamente incorrecto.
+
+Caso de prueba: Método de Euler con paso demasiado grande
+Descripción:
+El método de Euler es sencillo, pero su precisión y estabilidad dependen fuertemente del tamaño del paso h. Si el paso es demasiado grande, el método puede divergir o dar resultados absurdos, especialmente en ecuaciones donde la solución cambia rápidamente.
+
+Ejemplo:
+Supón que queremos simular la descarga de un capacitor en un circuito RC con 
+𝑅=1kΩ,  𝐶=100𝜇F, y un voltaje inicial de 5V. Usaremos el método de Euler, pero con un paso de integración enorme: 
+
+h=1s (cuando el tiempo característico del sistema es mucho menor).
+
+[🔗 Ver caso de prueba ](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema6/casoprueba.py)
+
+¿Por qué falla?
+
+El tiempo característico del circuito es 
+
+τ=RC=0.1s, pero el paso elegido es 
+
+h=1s, ¡diez veces mayor!
+
+El método de Euler, al usar un paso tan grande, no captura la rápida caída exponencial del voltaje y en vez de acercarse a cero, la solución alterna entre valores positivos y negativos cada vez más grandes (inestabilidad numérica).
+En la práctica, para sistemas con cambios rápidos, el paso debe ser mucho menor que la constante de tiempo del sistema. Si no, el método puede divergir y dar resultados absurdos, como en este ejemplo.
 ---
 
 ### 🚀 E3   T6 -  Programa (Completo )
