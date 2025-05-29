@@ -19,14 +19,14 @@ while y >= 0:
 
 
     
- # Output (fragmento):
-# t(s)	x(m)	y(m)
-# 0.00	0.00	0.00
-# 0.02	0.24	0.36
-# ...
-# 2.04	24.55	0.09
-# 2.06	24.79	-0.27
+ Output (fragmento):
+t(s)	x(m)	y(m)
+ 0.00	0.00	0.00
+ 0.02	0.24	0.36
+ ...
+ 2.04	24.55	0.09
+ 2.06	24.79	-0.27
 
-# Interpretación:
-# Tiempo de vuelo ≈ 2.05 s, alcance ≈ 24.6 m. Euler basta para un
-# videojuego; para balística real conviene RK4.
+ Interpretación:
+ Tiempo de vuelo ≈ 2.05 s, alcance ≈ 24.6 m. Euler basta para un
+ videojuego; para balística real conviene RK4.
