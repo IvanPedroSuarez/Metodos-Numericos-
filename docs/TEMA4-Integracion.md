@@ -104,6 +104,27 @@ Cada implementación incluye gráficos comparativos, análisis de errores y reco
 [🔗 Ver carpeta completa de integración numérica](https://github.com/IvanPedroSuarez/Metodos-Numericos-/tree/master/codigos/tema4)
 
 
+---
+
+## Caso de prueba: Ejemplo: Limitación por valores no definidos (NaN o infinito)
+
+Supón que el usuario ingresa la función:
+
+funcion_str = "1/x"
+a = -1
+b = 1
+n = 4
+Aquí, la función 1/x no está definida en x = 0 (hay una discontinuidad), y Python (NumPy) devolverá un error o un valor inf o nan al evaluar en ese punto.
+
+[🔗 Ver caso de prueba ](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/casoprueba.py)
+
+¿Por qué falla?
+¿Por qué ocurre este error?
+Porque Python (y NumPy) no pueden calcular el valor de 1/x en x = 0, lo que genera un valor indefinido (inf o nan).
+Este tipo de error no es de sintaxis, sino una limitación del cálculo numérico y del manejo de discontinuidades en Python.
+
+
+
 ### 🚀 T4-E3: Proyecto Final
 
 **Descripción:**  
