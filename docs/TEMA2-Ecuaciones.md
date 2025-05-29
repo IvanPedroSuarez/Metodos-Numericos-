@@ -147,6 +147,22 @@ Cada ejercicio incluye el análisis del procedimiento, la interpretación de res
 [🔗 Ver todos los códigos de implementación](https://github.com/IvanPedroSuarez/Metodos-Numericos-/tree/master/codigos/tema2)
 
 ---
+## Caso de prueba: Método de Newton-Raphson - Error al dividir entre 0
+
+Se quiere resolver la siguiente función utilizando el método de Newton-Raphson:
+
+x_{n+1} = x_n - f(x_n)/f'(x_n)
+
+para el valor específico de x0 = 0.0 con la función f(x) = x^(1/3)
+
+[🔗 Ver caso de prueba](https://github.com/tu_usuario/tu_repo/blob/main/newton_raphson_error.py)
+
+¿Por qué falla?
+La función falla porque al evaluar en x0 = 0.0, la derivada f'(x) = (1/3)x^(-2/3) no está definida (tiende a infinito).
+En la fórmula de Newton-Raphson, el denominador f'(x0) se vuelve infinito, causando una división por cero que Python no puede resolver.
+Python lanza ZeroDivisionError cuando detecta división por cero, deteniendo completamente la ejecución del programa.
+
+---
 
 ### 🚀 T2   --   E3  --- Proyecto
 
