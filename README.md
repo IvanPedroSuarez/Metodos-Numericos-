@@ -45,7 +45,3 @@ Los métodos numéricos permiten resolver problemas complejos que no tienen solu
 - Git / GitHub
 - PyCharm
 
-```bash
-# Clona el repositorio
-git clone https://github.com/tu-usuario/metodos-numericos-itesa.git
-cd metodos-numericos-itesa
