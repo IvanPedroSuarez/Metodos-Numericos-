@@ -115,7 +115,7 @@ Resolver el siguiente sistema de ecuaciones lineales utilizando el método de el
 **2x−4y=3**
 ​
 
-[🔗 Ver caso de prueba ](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema4/CasoPrueba.py)
+[🔗 Ver caso de prueba ](https://github.com/IvanPedroSuarez/Metodos-Numericos-/blob/master/codigos/tema3/CasoPrueba.py)
 
 ¿Por qué falla?El método falla cuando, durante el proceso, el pivote de una columna es cero y no hay ninguna fila disponible para intercambiar que tenga un valor distinto de cero en esa columna. Esto significa que el sistema no tiene solución única: puede ser inconsistente (como en este ejemplo, donde las ecuaciones son proporcionales pero los términos independientes no coinciden) o tener infinitas soluciones.
 En este caso, la segunda fila se transforma en [0, 0, 1], lo que representa una ecuación imposible (0 = 1), por lo que el algoritmo detecta la inconsistencia y lanza un error para evitar cálculos inválidos.
